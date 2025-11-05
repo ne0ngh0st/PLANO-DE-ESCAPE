@@ -1,0 +1,2304 @@
+/* Orçamentos - Tema Claro e Limpo (Baseado em Contratos) */
+
+/* Caixa de informação */
+.info-box {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border: 2px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0 0 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #1e40af;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+}
+
+.info-box i {
+    color: #3b82f6;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.info-box strong {
+    color: #1e40af;
+    font-weight: 700;
+}
+
+/* Estilos para modal de seleção de clientes */
+.lista-clientes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.card-cliente {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.card-cliente:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+    transform: translateY(-2px);
+}
+
+.card-cliente .cliente-nome {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-cliente .cliente-fantasia {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.card-cliente .cliente-cnpj {
+    color: #3b82f6;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-cliente .cliente-cnpj i {
+    color: #3b82f6;
+}
+
+.card-cliente .cliente-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-cliente .cliente-info > div {
+    color: #475569;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-cliente .cliente-info i {
+    color: #3b82f6;
+    width: 16px;
+}
+
+/* Background Claro e Limpo */
+body:has(.stats-grid) .dashboard-main {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    min-height: 100vh;
+    position: relative;
+    padding: 1.5rem;
+}
+
+/* Cabeçalho da Página - Tema Claro */
+.page-header {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.page-header-content h1 {
+    color: #1e293b;
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.page-header-content h1 i {
+    color: #3b82f6;
+    font-size: 1.8rem;
+}
+
+.page-description {
+    color: #64748b;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.page-actions {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+/* Estatísticas - Estilo Minimalista (Sem Ícones) */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    border-left: 3px solid #e2e8f0;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left-color: #3b82f6;
+}
+
+/* Ocultar ícones - Cards Minimalistas */
+.stat-icon {
+    display: none;
+}
+
+.stat-content {
+    width: 100%;
+}
+
+.stat-content h3 {
+    display: none;
+}
+
+.stat-number {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+}
+
+.stat-label {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Filtros - Estilo como Contratos */
+.filters-section {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.filters-row {
+    display: flex;
+    align-items: end;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 200px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+}
+
+.filter-select,
+.filter-input {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #ffffff;
+    color: #374151;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-select:focus,
+.filter-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 0 4px 12px rgba(59, 130, 246, 0.15);
+    transform: translateY(-1px);
+}
+
+.filter-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-left: auto;
+}
+
+/* Tabela */
+.table-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.table-responsive {
+    overflow-x: visible;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    table-layout: fixed;
+}
+
+.data-table th {
+    background: #1e293b;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+    white-space: nowrap;
+    font-size: 0.75rem;
+}
+
+.data-table td {
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Larguras específicas para cada coluna - 11 colunas */
+/* Ordem: ID, Data Criação, Cliente, Produto/Serviço, Valor, Pagamento, Validade, Vendedor/Criador, Aprovação Cliente, [Aprovação Gestor], Ações */
+
+.data-table th:nth-child(1),
+.data-table td:nth-child(1) {
+    width: 3%;
+    min-width: 35px;
+}
+
+.data-table th:nth-child(2),
+.data-table td:nth-child(2) {
+    width: 8%;
+    min-width: 75px;
+}
+
+.data-table th:nth-child(3),
+.data-table td:nth-child(3) {
+    width: 18%;
+    min-width: 150px;
+}
+
+.data-table th:nth-child(4),
+.data-table td:nth-child(4) {
+    width: 12%;
+    min-width: 120px;
+}
+
+.data-table th:nth-child(5),
+.data-table td:nth-child(5) {
+    width: 8%;
+    min-width: 75px;
+}
+
+.data-table th:nth-child(6),
+.data-table td:nth-child(6) {
+    width: 8%;
+    min-width: 70px;
+}
+
+.data-table th:nth-child(7),
+.data-table td:nth-child(7) {
+    width: 8%;
+    min-width: 75px;
+}
+
+.data-table th:nth-child(8),
+.data-table td:nth-child(8) {
+    width: 10%;
+    min-width: 90px;
+}
+
+.data-table th:nth-child(9),
+.data-table td:nth-child(9) {
+    width: 9%;
+    min-width: 85px;
+}
+
+.data-table th:nth-child(10),
+.data-table td:nth-child(10) {
+    width: 9%;
+    min-width: 80px;
+}
+
+.data-table th:nth-child(11),
+.data-table td:nth-child(11) {
+    width: 10%;
+    min-width: 90px;
+}
+
+.data-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* Informações do Cliente */
+.cliente-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    text-align: left;
+}
+
+.cliente-nome {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 0.8rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-align: left;
+    line-height: 1.3;
+}
+
+.cliente-razao {
+    font-size: 0.7rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.cliente-contato {
+    font-size: 0.7rem;
+    color: #059669;
+    font-weight: 500;
+}
+
+.cliente-email {
+    font-size: 0.7rem;
+    color: #64748b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Informações do Vendedor e Criador (Unificado) */
+.vendedor-criador-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+    align-items: center;
+}
+
+.codigo-vendedor {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: #374151;
+    background: #f0f9ff;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    border: 1px solid #bae6fd;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nome-usuario-criador {
+    font-size: 0.7rem;
+    color: #1e293b;
+    font-weight: 500;
+    padding: 0.2rem 0.4rem;
+    background: #f1f5f9;
+    border-radius: 3px;
+    border: 1px solid #cbd5e1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Informações antigas (mantém para compatibilidade) */
+.vendedor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.usuario-criador-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    text-align: left;
+}
+
+/* Informações do CNPJ */
+.cnpj-info {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #374151;
+    background: #f8fafc;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Badges de Origem */
+.origem-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.origem-prospeccao {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.origem-telefone {
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.origem-site {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.origem-outros {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+.origem-carteira {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.origem-lead {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.origem-target {
+    background: #fffbeb;
+    color: #d97706;
+}
+
+/* Informações do Produto */
+.produto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    text-align: left;
+}
+
+.produto-nome {
+    color: #374151;
+    line-height: 1.2;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+/* Valor */
+.valor-cell {
+    font-weight: 600;
+    color: #059669;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+/* Status */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+.status-pendente {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-aprovado {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-rejeitado {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-cancelado {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.status-nao-aplicavel {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+/* Badges de Aprovação do Cliente */
+.aprovacao-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.aprovacao-badge i {
+    font-size: 0.65rem;
+}
+
+.aprovacao-aprovado {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.aprovacao-pendente {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.aprovacao-rejeitado {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.aprovacao-processado {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.aprovacao-nao-enviado {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+/* Badges de Forma de Pagamento */
+.pagamento-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.pagamento-a_vista {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.pagamento-28_ddl {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Coluna de Aprovação/Rejeição */
+.approval-actions-cell {
+    white-space: nowrap;
+}
+
+.approval-buttons {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-approve-main {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #10b981;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.75rem;
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.btn-approve-main:hover {
+    background: #10b981;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.btn-reject-main {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ef4444;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.75rem;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-reject-main:hover {
+    background: #ef4444;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* Ações - Botões Clean como Contratos */
+.actions-cell {
+    white-space: nowrap;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-action {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.75rem;
+    background: #f8fafc;
+    color: #475569;
+}
+
+.btn-view {
+    background: #f8fafc;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.btn-view:hover {
+    background: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-edit {
+    background: #f8fafc;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.btn-edit:hover {
+    background: #f59e0b;
+    color: #ffffff;
+    border-color: #f59e0b;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.btn-delete {
+    background: #f8fafc;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.btn-delete:hover {
+    background: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.btn-pdf {
+    background: #f8fafc;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.btn-pdf:hover {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.btn-approve {
+    background: #f8fafc;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.btn-approve:hover {
+    background: #10b981;
+    color: #ffffff;
+    border-color: #10b981;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-reject {
+    background: #f8fafc;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.btn-reject:hover {
+    background: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.btn-link {
+    background: #f8fafc;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.btn-link:hover {
+    background: #0ea5e9;
+    color: #ffffff;
+    border-color: #0ea5e9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+/* Botão Gerar PDF no modal de visualização */
+.modal-footer .btn-danger,
+.modal-footer .btn-secondary {
+    background: #f8fafc !important;
+    color: #475569 !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+.modal-footer .btn-danger:hover {
+    background: #ef4444 !important;
+    color: #ffffff !important;
+    border-color: #ef4444 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3) !important;
+}
+
+/* Estado Vazio */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #64748b;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.empty-state p {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Alertas */
+.alert {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+}
+
+.alert-error {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.alert-error i {
+    color: #dc2626;
+}
+
+/* Botões - Estilo Clean Minimalista */
+.filter-actions .btn,
+.page-actions .btn,
+.table-container .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 0.625rem 1.25rem !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    background: #f8fafc !important;
+    color: #475569 !important;
+}
+
+.filter-actions .btn-primary,
+.page-actions .btn-primary,
+.table-container .btn-primary {
+    background: #f8fafc !important;
+    color: #475569 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.filter-actions .btn-primary:hover,
+.page-actions .btn-primary:hover,
+.table-container .btn-primary:hover {
+    background: #3b82f6 !important;
+    color: #ffffff !important;
+    border-color: #3b82f6 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+.filter-actions .btn-secondary,
+.page-actions .btn-secondary,
+.table-container .btn-secondary {
+    background: #f8fafc !important;
+    color: #475569 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.filter-actions .btn-secondary:hover,
+.page-actions .btn-secondary:hover,
+.table-container .btn-secondary:hover {
+    background: #6b7280 !important;
+    color: #ffffff !important;
+    border-color: #6b7280 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3) !important;
+}
+
+.filter-actions .btn-success,
+.page-actions .btn-success,
+.table-container .btn-success {
+    background: #f8fafc !important;
+    color: #475569 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.filter-actions .btn-success:hover,
+.page-actions .btn-success:hover,
+.table-container .btn-success:hover {
+    background: #10b981 !important;
+    color: #ffffff !important;
+    border-color: #10b981 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Modal - Estilo como Contratos */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    backdrop-filter: blur(4px);
+}
+
+.modal.active {
+    display: flex !important;
+}
+
+.modal-content {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    max-width: 1000px;
+    width: 100%;
+    max-height: 95vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: modalSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-large {
+    max-width: 1000px;
+}
+
+.modal-extra-large {
+    max-width: 95vw !important;
+    width: 95vw !important;
+    max-height: 95vh !important;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 2.5rem 2rem 2.5rem !important;
+    border-bottom: 1px solid #e2e8f0;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    border-radius: 16px 16px 0 0;
+    margin: 0 !important;
+}
+
+.modal-header h2 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: -0.025em;
+}
+
+.modal-header h2 i {
+    color: #3b82f6;
+    font-size: 1.375rem;
+}
+
+.modal-close {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 1.25rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-close::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.modal-close:hover::before {
+    opacity: 1;
+}
+
+.modal-close:hover {
+    border-color: #ef4444;
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+.modal-close i {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.modal-close:hover i {
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 2.5rem !important;
+    overflow-y: auto;
+    color: #475569;
+    line-height: 1.6;
+    flex: 1;
+    margin: 0 !important;
+}
+
+.modal-footer {
+    padding: 2rem 2.5rem;
+    border-top: 2px solid #f1f5f9;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+}
+
+/* Formulário - Estilo como Contratos */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Quando dentro de form-section, ajustar espaçamento */
+.form-section .form-row {
+    margin-bottom: 1.5rem;
+}
+
+.form-section .form-row:last-child {
+    margin-bottom: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+/* Quando dentro de form-section, reduzir margem */
+.form-section .form-group {
+    margin-bottom: 1.5rem !important;
+}
+
+.form-section .form-group:last-child {
+    margin-bottom: 0 !important;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.9rem;
+    letter-spacing: 0.025em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #ffffff;
+    color: #374151;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 0 4px 12px rgba(59, 130, 246, 0.15);
+    transform: translateY(-1px);
+    background: #ffffff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+/* Wrapper de busca de cliente */
+.busca-cliente-wrapper {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.busca-cliente-wrapper input {
+    flex: 1;
+}
+
+.btn-buscar-cliente {
+    background: #3b82f6;
+    color: #ffffff;
+    border: 2px solid #3b82f6;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-buscar-cliente:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-buscar-cliente:active {
+    transform: translateY(0);
+}
+
+.btn-buscar-cliente i {
+    font-size: 0.875rem;
+}
+
+.form-help {
+    display: block;
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Campos preenchidos automaticamente */
+.campo-auto-preenchido {
+    background-color: #f0f9ff !important;
+    border-color: #0ea5e9 !important;
+    position: relative;
+}
+
+.campo-auto-preenchido::after {
+    content: "✓ Preenchido automaticamente";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    color: #0ea5e9;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+/* Informações do usuário no modal */
+.info-usuario-modal {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.info-usuario-modal span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #0c4a6e;
+    font-weight: 500;
+}
+
+.usuario-nome {
+    color: #0c4a6e !important;
+    font-weight: 600 !important;
+}
+
+.codigo-vendedor {
+    background: #e0f2fe;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #bae6fd;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+}
+
+.perfil-usuario {
+    background: #ecfdf5;
+    color: #047857 !important;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #a7f3d0;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.btn-limpar-campos {
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: auto;
+}
+
+.btn-limpar-campos:hover {
+    background: #fee2e2;
+    border-color: #f87171;
+    transform: translateY(-1px);
+}
+
+/* Seção de Formulário */
+.form-section {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.form-section:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h4 {
+    margin: 0 0 1.5rem 0;
+    color: #1e293b;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.form-section h4 i {
+    color: #3b82f6;
+    font-size: 1.25rem;
+}
+
+/* Campo de descrição da origem */
+#origem-descricao-group {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+#origem-descricao-group label {
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#origem-descricao {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    resize: vertical;
+    min-height: 80px;
+}
+
+#origem-descricao:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Campo de forma de pagamento personalizada */
+#forma-pagamento-personalizada-group {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+#forma-pagamento-personalizada-group label {
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#forma-pagamento-personalizada-group label::before {
+    content: "📝";
+    font-size: 0.875rem;
+}
+
+#forma-pagamento-personalizada {
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    color: #374151;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: inherit;
+    width: 100%;
+}
+
+#forma-pagamento-personalizada:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 0 4px 12px rgba(59, 130, 246, 0.15);
+    transform: translateY(-1px);
+    background: #ffffff;
+}
+
+#forma-pagamento-personalizada::placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+/* Estilos para Tipo de Faturamento (Produto/Serviço) */
+.checkbox-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #ffffff;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.checkbox-label:hover {
+    border-color: #3b82f6;
+    background: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.2);
+}
+
+.checkbox-label:has(input:checked) {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+/* Cores específicas para Serviço - Mais sutil */
+.checkbox-label:has(input[value="servico"]:checked) {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.checkbox-label:has(input[value="servico"]:checked) .checkbox-custom {
+    border-color: #3b82f6;
+    background: #3b82f6;
+}
+
+.checkbox-label:has(input[value="servico"]:checked) .checkbox-text {
+    color: #1e40af;
+}
+
+.checkbox-label:has(input[value="servico"]:checked) .checkbox-text i {
+    color: #3b82f6;
+}
+
+/* Cores específicas para Produto - Mais sutil */
+.checkbox-label:has(input[value="produto"]:checked) {
+    border-color: #6366f1;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+.checkbox-label:has(input[value="produto"]:checked) .checkbox-custom {
+    border-color: #6366f1;
+    background: #6366f1;
+}
+
+.checkbox-label:has(input[value="produto"]:checked) .checkbox-text {
+    color: #4338ca;
+}
+
+.checkbox-label:has(input[value="produto"]:checked) .checkbox-text i {
+    color: #6366f1;
+}
+
+.checkbox-label input[type="radio"] {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.checkbox-label input[type="radio"]:checked + .checkbox-custom {
+    border-color: #3b82f6;
+    background: #3b82f6;
+}
+
+.checkbox-label input[type="radio"]:checked + .checkbox-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.checkbox-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    flex: 1;
+}
+
+.checkbox-text i {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 0.1rem;
+}
+
+.checkbox-text strong {
+    font-size: 0.875rem;
+    color: #374151;
+    font-weight: 700;
+}
+
+.checkbox-text small {
+    font-size: 0.7rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Destaque para produto (com IPI) */
+.checkbox-label:has(input[value="produto"]) {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+}
+
+.checkbox-label:has(input[value="produto"]):hover {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+}
+
+.checkbox-label:has(input[value="produto"]) .checkbox-text i {
+    color: #f59e0b;
+}
+
+.checkbox-label:has(input[value="produto"]) .checkbox-text strong {
+    color: #92400e;
+}
+
+.checkbox-label:has(input[value="produto"]) .checkbox-text small {
+    color: #b45309;
+    font-weight: 600;
+}
+
+/* Destaque para serviço */
+.checkbox-label:has(input[value="servico"]) {
+    border-color: #10b981;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+.checkbox-label:has(input[value="servico"]):hover {
+    border-color: #10b981;
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.checkbox-label:has(input[value="servico"]) .checkbox-text i {
+    color: #10b981;
+}
+
+.checkbox-label:has(input[value="servico"]) .checkbox-text strong {
+    color: #065f46;
+}
+
+.checkbox-label:has(input[value="servico"]) .checkbox-text small {
+    color: #047857;
+    font-weight: 600;
+}
+
+/* Estilos para Cálculo de IPI */
+#ipi-calculo-group {
+    margin-top: 1rem;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ipi-info-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+    border: 2px solid #f59e0b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.ipi-info-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+}
+
+.ipi-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #92400e;
+    font-size: 1.1rem;
+}
+
+.ipi-header i {
+    font-size: 1.25rem;
+    color: #f59e0b;
+}
+
+.ipi-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.ipi-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(146, 64, 14, 0.2);
+}
+
+.ipi-row:last-child {
+    border-bottom: none;
+}
+
+.ipi-row span:first-child {
+    color: #92400e;
+    font-weight: 600;
+}
+
+.ipi-row span:last-child {
+    color: #92400e;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+}
+
+.ipi-row.total {
+    background: rgba(146, 64, 14, 0.1);
+    margin: 0 -1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #f59e0b;
+    font-size: 1.2rem;
+}
+
+.ipi-row.total span:last-child {
+    color: #92400e;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+/* Texto de cores */
+.text-danger {
+    color: #dc2626;
+}
+
+.text-warning {
+    color: #d97706;
+}
+
+.text-muted {
+    color: #9ca3af;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 1.5rem;
+    }
+    
+    .page-actions {
+        position: static;
+        margin-top: 1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .filters-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        min-width: auto;
+    }
+    
+    .filter-actions {
+        margin-left: 0;
+        justify-content: stretch;
+    }
+    
+    .filter-actions .btn {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        margin: 2% auto;
+        width: 95%;
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 1rem;
+    }
+    
+    .data-table {
+        font-size: 0.75rem;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .btn-action {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stat-card {
+        padding: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .empty-state {
+        padding: 2rem 1rem;
+    }
+    
+    .empty-icon {
+        font-size: 3rem;
+    }
+}
+
+/* Tabela de Itens do Orçamento */
+.tabela-itens-container {
+    margin-top: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    overflow-x: auto;
+    overflow-y: visible;
+    position: relative;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Aplicar cores baseadas no tipo de faturamento selecionado - Mais sutil */
+.tabela-itens-container.tipo-servico {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+}
+
+.tabela-itens-container.tipo-produto {
+    border-color: #6366f1;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+
+.tabela-itens-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tabela-itens-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.tabela-itens-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.tabela-itens-container::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.tabela-itens {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.tabela-itens th {
+    background: #f8fafc;
+    color: #374151;
+    font-weight: 600;
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+/* Cores dos cabeçalhos baseadas no tipo - Mais sutil */
+.tabela-itens-container.tipo-servico .tabela-itens th {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    color: #374151;
+    border-bottom-color: #3b82f6;
+}
+
+.tabela-itens-container.tipo-produto .tabela-itens th {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    color: #374151;
+    border-bottom-color: #6366f1;
+}
+
+.tabela-itens td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+/* Cores das linhas baseadas no tipo - Mais sutil */
+.tabela-itens-container.tipo-servico .tabela-itens tbody tr:hover {
+    background: #f8fafc;
+}
+
+.tabela-itens-container.tipo-servico .tabela-itens tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.tabela-itens-container.tipo-produto .tabela-itens tbody tr:hover {
+    background: #f8fafc;
+}
+
+.tabela-itens-container.tipo-produto .tabela-itens tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.tabela-itens tbody tr:hover {
+    background: #f8fafc;
+}
+
+.tabela-itens tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela-itens input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    background: #ffffff;
+}
+
+.tabela-itens input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.tabela-itens .input-item {
+    width: 100px;
+    min-width: 100px;
+}
+
+.tabela-itens .input-descricao {
+    min-width: 250px;
+    width: 250px;
+}
+
+.tabela-itens .input-quantidade {
+    width: 100px;
+    min-width: 100px;
+}
+
+.tabela-itens .input-valor-unitario {
+    width: 120px;
+    min-width: 120px;
+}
+
+.tabela-itens th:nth-child(1),
+.tabela-itens td:nth-child(1) {
+    width: 100px;
+    min-width: 100px;
+}
+
+.tabela-itens th:nth-child(2),
+.tabela-itens td:nth-child(2) {
+    width: 250px;
+    min-width: 250px;
+}
+
+.tabela-itens th:nth-child(3),
+.tabela-itens td:nth-child(3) {
+    width: 100px;
+    min-width: 100px;
+}
+
+.tabela-itens th:nth-child(4),
+.tabela-itens td:nth-child(4) {
+    width: 120px;
+    min-width: 120px;
+}
+
+.tabela-itens th:nth-child(5),
+.tabela-itens td:nth-child(5) {
+    width: 120px;
+    min-width: 120px;
+}
+
+.tabela-itens th:nth-child(6),
+.tabela-itens td:nth-child(6) {
+    width: 80px;
+    min-width: 80px;
+}
+
+.valor-total-item {
+    font-weight: 600;
+    color: #059669;
+}
+
+.total-row {
+    background: #f8fafc;
+    font-weight: 600;
+}
+
+.total-row td {
+    border-top: 2px solid #e2e8f0;
+    padding: 0.75rem;
+}
+
+.total-label {
+    text-align: right;
+    color: #374151;
+}
+
+.total-value {
+    color: #059669;
+    font-size: 1.1rem;
+}
+
+.btn-remover-item {
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-remover-item:hover {
+    background: #fecaca;
+    transform: scale(1.05);
+}
+
+.botoes-itens {
+    padding: 1rem;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+/* Botões com cores baseadas no tipo - Mais sutil */
+.tabela-itens-container.tipo-servico .botoes-itens {
+    background: #f8fafc;
+    border-top-color: #3b82f6;
+}
+
+.tabela-itens-container.tipo-servico .botoes-itens .btn {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: #ffffff;
+}
+
+.tabela-itens-container.tipo-servico .botoes-itens .btn:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.tabela-itens-container.tipo-produto .botoes-itens {
+    background: #f8fafc;
+    border-top-color: #6366f1;
+}
+
+.tabela-itens-container.tipo-produto .botoes-itens .btn {
+    background: #6366f1;
+    border-color: #6366f1;
+    color: #ffffff;
+}
+
+.tabela-itens-container.tipo-produto .botoes-itens .btn:hover {
+    background: #4f46e5;
+    border-color: #4f46e5;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.campo-readonly {
+    background: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+/* Botões dos Formulários dos Modais - Estilo Clean */
+.modal-footer .btn-cancel,
+.modal-footer .btn-save {
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    border: 1px solid #e2e8f0 !important;
+    background: #f8fafc !important;
+    color: #475569 !important;
+    justify-content: center !important;
+}
+
+.modal-footer .btn-cancel:hover {
+    background: #6b7280 !important;
+    color: #ffffff !important;
+    border-color: #6b7280 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3) !important;
+}
+
+.modal-footer .btn-save:hover {
+    background: #3b82f6 !important;
+    color: #ffffff !important;
+    border-color: #3b82f6 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Estados dos botões */
+.modal-footer .btn-cancel:active,
+.modal-footer .btn-save:active {
+    transform: translateY(0) !important;
+}
+
+.modal-footer .btn-cancel:disabled,
+.modal-footer .btn-save:disabled {
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+}
+
+.modal-footer .btn-cancel:disabled:hover,
+.modal-footer .btn-save:disabled:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Desktop - Modais maiores */
+@media (min-width: 1200px) {
+    .modal-content {
+        max-width: 1200px;
+    }
+    
+    .modal-extra-large {
+        max-width: 95vw !important;
+        width: 95vw !important;
+    }
+    
+    .modal-large {
+        max-width: 1400px;
+    }
+    
+    .tabela-itens {
+        min-width: 1200px;
+    }
+    
+    .tabela-itens-container {
+        overflow-x: visible;
+    }
+}
+
+/* Responsividade para tabela de itens */
+@media (max-width: 768px) {
+    .modal-extra-large {
+        max-width: 100vw !important;
+        width: 100vw !important;
+        margin: 0;
+        max-height: 100vh !important;
+        border-radius: 0;
+    }
+    
+    .tabela-itens-container {
+        overflow-x: auto;
+        margin: 0 -1rem;
+        border-radius: 0;
+    }
+    
+    .tabela-itens {
+        min-width: 800px;
+    }
+    
+    .tabela-itens th,
+    .tabela-itens td {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .tabela-itens .input-descricao {
+        min-width: 200px;
+    }
+    
+    .tabela-itens .input-item {
+        width: 80px;
+        min-width: 80px;
+    }
+    
+    .tabela-itens .input-quantidade {
+        width: 80px;
+        min-width: 80px;
+    }
+    
+    .tabela-itens .input-valor-unitario {
+        width: 100px;
+        min-width: 100px;
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 1.5rem !important;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .checkbox-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .btn-cancel, .btn-save {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+/* Estilos para Card de Cliente com Badge de Origem */
+.card-header-with-badge {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-header-with-badge .cliente-nome {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.badge-origem {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.badge-origem i {
+    font-size: 0.65rem;
+}
+
+.badge-lead {
+    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+.badge-cliente {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: #1e40af;
+    border: 1px solid #93c5fd;
+}
+
+/* Efeito hover nos cards com badge de origem */
+.card-cliente:hover .badge-lead {
+    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+    border-color: #fdba74;
+    box-shadow: 0 2px 4px rgba(146, 64, 14, 0.2);
+}
+
+.card-cliente:hover .badge-cliente {
+    background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%);
+    border-color: #60a5fa;
+    box-shadow: 0 2px 4px rgba(30, 64, 175, 0.2);
+}

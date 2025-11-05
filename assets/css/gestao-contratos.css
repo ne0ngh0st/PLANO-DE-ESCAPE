@@ -1,0 +1,763 @@
+/* ============================================
+   GESTÃO DE CONTRATOS - GLASSMORPHISM STYLE
+   ESCOPO: Apenas body.page-gestao-contratos
+   
+   IMPORTANTE: Usa !important para sobrescrever
+   estilos globais do estilo.css
+   ============================================ */
+
+/* ============================================
+   BODY E BACKGROUND - MINIMALISTA COM TEXTURA
+   ============================================ */
+
+body.page-gestao-contratos {
+    background: 
+        linear-gradient(135deg, rgba(245, 241, 232, 0.95) 0%, rgba(245, 241, 232, 0.98) 100%),
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0, 0, 0, 0.02) 35px, rgba(0, 0, 0, 0.02) 70px),
+        repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(0, 0, 0, 0.015) 35px, rgba(0, 0, 0, 0.015) 70px),
+        #f5f1e8 !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+}
+
+body.page-gestao-contratos::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(118, 75, 162, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(240, 147, 251, 0.02) 0%, transparent 50%) !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+body.page-gestao-contratos .dashboard-layout {
+    background: transparent !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+body.page-gestao-contratos .dashboard-container {
+    background: transparent !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+body.page-gestao-contratos .dashboard-main {
+    background: transparent !important;
+    padding: 2rem !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* ============================================
+   CABEÇALHO GLASSMORPHISM
+   ============================================ */
+
+body.page-gestao-contratos .page-header-glass {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(30px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 24px !important;
+    padding: 2rem !important;
+    margin-bottom: 2rem !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 2rem !important;
+}
+
+body.page-gestao-contratos .page-header-glass .page-header-content h1 {
+    color: #2c3e50 !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+}
+
+body.page-gestao-contratos .page-header-glass .page-subtitle {
+    color: #5a6c7d !important;
+    font-size: 0.95rem !important;
+    margin: 0.5rem 0 0 0 !important;
+}
+
+/* ============================================
+   BOTÕES GLASSMORPHISM
+   ============================================ */
+
+body.page-gestao-contratos .btn-glass {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 12px !important;
+    padding: 0.875rem 1.5rem !important;
+    color: #2c3e50 !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.page-gestao-contratos .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.95) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+body.page-gestao-contratos .btn-add-new {
+    background: #2c3e50 !important;
+    color: white !important;
+    font-size: 1rem !important;
+}
+
+body.page-gestao-contratos .btn-add-new:hover {
+    background: #34495e !important;
+}
+
+body.page-gestao-contratos .btn-salvar {
+    background: #27ae60 !important;
+    color: white !important;
+}
+
+body.page-gestao-contratos .btn-salvar:hover {
+    background: #2ecc71 !important;
+}
+
+body.page-gestao-contratos .btn-cancelar {
+    background: rgba(255, 255, 255, 0.8) !important;
+    color: #e74c3c !important;
+}
+
+body.page-gestao-contratos .btn-cancelar:hover {
+    background: #e74c3c !important;
+    color: white !important;
+}
+
+/* ============================================
+   CARDS DE RESUMO GLASSMORPHISM
+   ============================================ */
+
+body.page-gestao-contratos .resumo-cards-glass {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 1.5rem !important;
+    margin-bottom: 2rem !important;
+}
+
+body.page-gestao-contratos .card-glass {
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(25px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.7) !important;
+    border-radius: 20px !important;
+    padding: 1.5rem !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+body.page-gestao-contratos .card-glass::before {
+    display: none !important;
+}
+
+body.page-gestao-contratos .card-glass:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.page-gestao-contratos .card-glass-icon {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.75rem !important;
+    color: white !important;
+    flex-shrink: 0 !important;
+}
+
+body.page-gestao-contratos .card-azul .card-glass-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+body.page-gestao-contratos .card-laranja .card-glass-icon {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+}
+
+body.page-gestao-contratos .card-verde .card-glass-icon {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
+}
+
+body.page-gestao-contratos .card-roxo .card-glass-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+body.page-gestao-contratos .card-glass-content h3 {
+    color: #5a6c7d !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    margin: 0 0 0.5rem 0 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+body.page-gestao-contratos .card-glass-valor {
+    color: #2c3e50 !important;
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+}
+
+/* ============================================
+   FORMULÁRIO GLASSMORPHISM
+   ============================================ */
+
+body.page-gestao-contratos .glass-form-container {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(30px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 24px !important;
+    padding: 2rem !important;
+    margin-bottom: 2rem !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+    animation: slideDown 0.4s ease !important;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body.page-gestao-contratos .glass-form-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 2rem !important;
+    padding-bottom: 1rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body.page-gestao-contratos .glass-form-header h2 {
+    color: #2c3e50 !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+}
+
+body.page-gestao-contratos .btn-close-form {
+    background: rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #5a6c7d !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+body.page-gestao-contratos .btn-close-form:hover {
+    background: rgba(0, 0, 0, 0.1) !important;
+    transform: rotate(90deg) !important;
+    color: #e74c3c !important;
+}
+
+body.page-gestao-contratos .form-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important;
+    gap: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+body.page-gestao-contratos .form-section h3 {
+    color: #2c3e50 !important;
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    margin: 0 0 1.5rem 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+body.page-gestao-contratos .form-row {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+body.page-gestao-contratos .form-group {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+body.page-gestao-contratos .form-group label {
+    color: #5a6c7d !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+body.page-gestao-contratos .form-group input,
+body.page-gestao-contratos .form-group select {
+    background: white !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+    padding: 0.75rem 1rem !important;
+    color: #2c3e50 !important;
+    font-size: 0.95rem !important;
+    transition: all 0.3s ease !important;
+}
+
+body.page-gestao-contratos .form-group input::placeholder {
+    color: #bdc3c7 !important;
+}
+
+body.page-gestao-contratos .form-group input:focus,
+body.page-gestao-contratos .form-group select:focus {
+    outline: none !important;
+    border-color: #2c3e50 !important;
+    background: white !important;
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1) !important;
+}
+
+body.page-gestao-contratos .form-group select option {
+    background: white !important;
+    color: #2c3e50 !important;
+}
+
+body.page-gestao-contratos .form-actions {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 1rem !important;
+    margin-top: 2rem !important;
+    padding-top: 1.5rem !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ============================================
+   GERENCIADORES CARDS
+   ============================================ */
+
+body.page-gestao-contratos .gerenciadores-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+}
+
+body.page-gestao-contratos .gerenciador-card-glass {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(30px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+body.page-gestao-contratos .gerenciador-card-glass:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.page-gestao-contratos .gerenciador-header {
+    padding: 1.5rem 2rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    cursor: pointer !important;
+    gap: 2rem !important;
+    transition: all 0.3s ease !important;
+}
+
+body.page-gestao-contratos .gerenciador-header:hover {
+    background: rgba(0, 0, 0, 0.02) !important;
+}
+
+body.page-gestao-contratos .gerenciador-info h2 {
+    color: #2c3e50 !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    margin: 0 0 0.5rem 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+}
+
+body.page-gestao-contratos .badge-contratos {
+    background: rgba(44, 62, 80, 0.1) !important;
+    color: #2c3e50 !important;
+    padding: 0.25rem 0.75rem !important;
+    border-radius: 20px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+}
+
+body.page-gestao-contratos .gerenciador-valores {
+    display: flex !important;
+    gap: 2rem !important;
+}
+
+body.page-gestao-contratos .valor-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+}
+
+body.page-gestao-contratos .valor-label {
+    color: #7f8c8d !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 0.25rem !important;
+}
+
+body.page-gestao-contratos .valor-amount {
+    color: #2c3e50 !important;
+    font-size: 1.125rem !important;
+    font-weight: 700 !important;
+}
+
+body.page-gestao-contratos .valor-consumido {
+    color: #f093fb !important;
+}
+
+body.page-gestao-contratos .valor-saldo {
+    color: #38ef7d !important;
+}
+
+body.page-gestao-contratos .btn-toggle {
+    background: rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #5a6c7d !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+body.page-gestao-contratos .btn-toggle:hover {
+    background: rgba(0, 0, 0, 0.1) !important;
+    color: #2c3e50 !important;
+}
+
+body.page-gestao-contratos .gerenciador-card-glass.expanded .btn-toggle i {
+    transform: rotate(180deg) !important;
+}
+
+/* ============================================
+   BARRA DE PROGRESSO
+   ============================================ */
+
+body.page-gestao-contratos .progress-bar-glass {
+    height: 8px !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    margin: 0 2rem 1.5rem 2rem !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+body.page-gestao-contratos .progress-fill {
+    height: 100% !important;
+    background: linear-gradient(90deg, #38ef7d 0%, #f093fb 50%, #f5576c 100%) !important;
+    border-radius: 10px !important;
+    transition: width 0.6s ease !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    padding-right: 0.5rem !important;
+}
+
+body.page-gestao-contratos .progress-text {
+    color: white !important;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    position: absolute !important;
+    right: 0.5rem !important;
+}
+
+body.page-gestao-contratos .status-normal .progress-fill {
+    background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%) !important;
+}
+
+body.page-gestao-contratos .status-alerta .progress-fill {
+    background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%) !important;
+}
+
+body.page-gestao-contratos .status-critico .progress-fill {
+    background: linear-gradient(90deg, #fa709a 0%, #fee140 100%) !important;
+}
+
+/* ============================================
+   CONTRATOS FILHOS
+   ============================================ */
+
+body.page-gestao-contratos .contratos-filhos {
+    padding: 0 2rem 2rem 2rem !important;
+}
+
+body.page-gestao-contratos .contratos-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) !important;
+    gap: 1.25rem !important;
+}
+
+body.page-gestao-contratos .contrato-filho-glass {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.9) !important;
+    border-radius: 16px !important;
+    padding: 1.25rem !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+    transition: all 0.3s ease !important;
+}
+
+body.page-gestao-contratos .contrato-filho-glass:hover {
+    background: rgba(255, 255, 255, 0.8) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+}
+
+body.page-gestao-contratos .contrato-filho-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 1rem !important;
+}
+
+body.page-gestao-contratos .contrato-filho-header h4 {
+    color: #2c3e50 !important;
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+body.page-gestao-contratos .badge-percentual {
+    padding: 0.25rem 0.75rem !important;
+    border-radius: 12px !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    color: white !important;
+}
+
+body.page-gestao-contratos .badge-normal {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
+}
+
+body.page-gestao-contratos .badge-alerta {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+}
+
+body.page-gestao-contratos .badge-critico {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+}
+
+body.page-gestao-contratos .contrato-filho-info {
+    margin-bottom: 1rem !important;
+}
+
+body.page-gestao-contratos .info-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.5rem 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+body.page-gestao-contratos .info-row:last-child {
+    border-bottom: none !important;
+}
+
+body.page-gestao-contratos .info-label {
+    color: #7f8c8d !important;
+    font-size: 0.8rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+body.page-gestao-contratos .info-value {
+    color: #2c3e50 !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+}
+
+body.page-gestao-contratos .contrato-filho-valores {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+body.page-gestao-contratos .valor-col {
+    text-align: center !important;
+}
+
+body.page-gestao-contratos .valor-col-label {
+    display: block !important;
+    color: #95a5a6 !important;
+    font-size: 0.7rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 0.25rem !important;
+}
+
+body.page-gestao-contratos .valor-col-amount {
+    display: block !important;
+    color: #2c3e50 !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+}
+
+body.page-gestao-contratos .valor-col-amount.consumido {
+    color: #f093fb !important;
+}
+
+body.page-gestao-contratos .valor-col-amount.saldo {
+    color: #38ef7d !important;
+}
+
+body.page-gestao-contratos .contrato-mini-progress {
+    height: 4px !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+body.page-gestao-contratos .contrato-mini-progress-fill {
+    height: 100% !important;
+    background: linear-gradient(90deg, #38ef7d 0%, #f093fb 100%) !important;
+    border-radius: 10px !important;
+    transition: width 0.6s ease !important;
+}
+
+body.page-gestao-contratos .sem-contratos {
+    color: #95a5a6 !important;
+    text-align: center !important;
+    padding: 2rem !important;
+    font-style: italic !important;
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+body.page-gestao-contratos .empty-state-glass {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 20px !important;
+    padding: 4rem 2rem !important;
+    text-align: center !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.page-gestao-contratos .empty-state-glass i {
+    font-size: 4rem !important;
+    color: #bdc3c7 !important;
+    margin-bottom: 1rem !important;
+}
+
+body.page-gestao-contratos .empty-state-glass p {
+    color: #7f8c8d !important;
+    font-size: 1.125rem !important;
+    margin: 0 !important;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+    body.page-gestao-contratos .gerenciador-header {
+        flex-wrap: wrap !important;
+    }
+    
+    body.page-gestao-contratos .gerenciador-valores {
+        width: 100% !important;
+        justify-content: space-between !important;
+    }
+    
+    body.page-gestao-contratos .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body.page-gestao-contratos .page-header-glass {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    
+    body.page-gestao-contratos .resumo-cards-glass {
+        grid-template-columns: 1fr !important;
+    }
+    
+    body.page-gestao-contratos .gerenciador-valores {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        align-items: flex-start !important;
+    }
+    
+    body.page-gestao-contratos .valor-item {
+        align-items: flex-start !important;
+    }
+    
+    body.page-gestao-contratos .contratos-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    body.page-gestao-contratos .form-row {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body.page-gestao-contratos .page-header-glass,
+    body.page-gestao-contratos .glass-form-container,
+    body.page-gestao-contratos .gerenciador-card-glass {
+        border-radius: 16px !important;
+        padding: 1.25rem !important;
+    }
+    
+    body.page-gestao-contratos .gerenciador-header {
+        padding: 1.25rem !important;
+    }
+    
+    body.page-gestao-contratos .contratos-filhos {
+        padding: 0 1.25rem 1.25rem 1.25rem !important;
+    }
+}

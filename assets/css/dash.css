@@ -1,0 +1,343 @@
+/* ===== ESTILOS GERAIS PARA DASH.PHP ===== */
+
+.dash-welcome {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.dash-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.dash-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.acesso-limitado-info {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 32px;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.dashboard-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 24px;
+    min-height: 700px;
+    position: relative;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.dashboard-title {
+    margin: 0;
+    color: #1a237e;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.dashboard-iframe {
+    width: 100%;
+    height: 650px;
+    border-radius: 8px;
+}
+
+/* Botões de fullscreen */
+.fullscreen-btn {
+    background: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 36px;
+}
+
+.fullscreen-btn:hover {
+    background: #283593;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(26, 35, 126, 0.3);
+}
+
+.fullscreen-btn i {
+    font-size: 16px;
+}
+
+/* Modal Fullscreen */
+.fullscreen-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 9999;
+    flex-direction: column;
+}
+
+.fullscreen-header {
+    background: #1a237e;
+    color: white;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.fullscreen-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close-fullscreen {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-fullscreen:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.1);
+}
+
+.fullscreen-content {
+    flex: 1;
+    padding: 0;
+    background: #fff;
+}
+
+.fullscreen-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Animação de entrada */
+.fullscreen-modal.show {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== ESTILOS DE DARK MODE ===== */
+[data-theme="dark"] .dash-title {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .dash-subtitle {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .acesso-limitado-info {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .acesso-limitado-info i {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .dashboard-card {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .dashboard-title {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .fullscreen-btn {
+    background: linear-gradient(135deg, #ff8f00 0%, #ff9800 100%) !important;
+    color: #ffffff !important;
+    border: 1px solid #ff8f00;
+}
+
+[data-theme="dark"] .fullscreen-btn:hover {
+    background: linear-gradient(135deg, #ff9800 0%, #ffcc02 100%) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .fullscreen-header {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border-bottom: 1px solid #ff8f00;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .fullscreen-header h3 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .close-fullscreen {
+    background: rgba(255, 152, 0, 0.2) !important;
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .close-fullscreen:hover {
+    background: rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .fullscreen-content {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+}
+
+[data-theme="dark"] .dashboard-footer {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border-top: 1px solid #ff8f00;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .dashboard-footer p {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .system-info {
+    color: #ffcc80 !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .dashboard-card {
+        padding: 16px;
+        min-height: 500px;
+    }
+    
+    .dashboard-iframe {
+        height: 450px;
+    }
+    
+    .fullscreen-header {
+        padding: 12px 16px;
+    }
+    
+    .fullscreen-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .close-fullscreen {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    
+    .dash-title {
+        font-size: 2rem;
+    }
+    
+    .dash-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-card {
+        padding: 12px;
+        min-height: 400px;
+    }
+    
+    .dashboard-iframe {
+        height: 350px;
+    }
+    
+    .dash-title {
+        font-size: 1.5rem;
+    }
+    
+    .acesso-limitado-info {
+        padding: 12px;
+        margin-top: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

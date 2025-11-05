@@ -1,0 +1,507 @@
+/* ===== LEADS MOBILE CARDS - BASEADO NA CARTEIRA OTIMIZADA ===== */
+
+/* ===== VARIÁVEIS ESPECÍFICAS PARA LEADS ===== */
+:root {
+    --leads-primary: #1a237e;
+    --leads-secondary: #3949ab;
+    --leads-success: #28a745;
+    --leads-warning: #ffc107;
+    --leads-danger: #dc3545;
+    --leads-light: #f8f9fa;
+    --leads-dark: #333;
+    --leads-border: #dee2e6;
+    --leads-radius: 8px;
+    --leads-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --leads-spacing: 1rem;
+    --leads-spacing-sm: 0.5rem;
+    --leads-spacing-lg: 1.5rem;
+}
+
+/* ===== INDICADOR DE LAYOUT MOBILE ===== */
+.mobile-layout-indicator {
+    display: none;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    color: #1565c0;
+    padding: 0.75rem 1rem;
+    border-radius: var(--leads-radius);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid #2196f3;
+    box-shadow: var(--leads-shadow);
+}
+
+.mobile-layout-indicator i {
+    margin-right: 0.5rem;
+    color: #1976d2;
+}
+
+/* ===== CONTAINER DE CARDS MOBILE ===== */
+.mobile-cards-container {
+    display: none;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== CARD DE LEAD ===== */
+.lead-card {
+    background: white;
+    border-radius: var(--leads-radius);
+    box-shadow: var(--leads-shadow);
+    border: 1px solid var(--leads-border);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.lead-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== HEADER DO CARD ===== */
+.lead-card-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 1rem;
+    border-bottom: 1px solid var(--leads-border);
+}
+
+.lead-card-nome {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.lead-card-nome h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--leads-dark);
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+.lead-card-nome .cnpj-badge {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #1565c0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
+    border: 1px solid #bbdefb;
+    max-width: fit-content;
+}
+
+.lead-card-fantasia {
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+.lead-card-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* ===== INFORMAÇÕES DO LEAD ===== */
+.lead-card-info {
+    padding: 1rem;
+    background: white;
+}
+
+.lead-info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.lead-info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 3px solid var(--leads-primary);
+    transition: all 0.3s ease;
+}
+
+.lead-info-item:hover {
+    background: #e9ecef;
+    transform: translateX(2px);
+}
+
+.lead-info-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--leads-dark);
+    min-width: 80px;
+}
+
+.lead-info-value {
+    font-size: 0.85rem;
+    color: #495057;
+    text-align: right;
+    word-break: break-word;
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+.lead-info-value.data {
+    font-family: 'Courier New', monospace;
+    font-weight: 500;
+}
+
+.lead-info-value.email {
+    color: #007bff;
+    font-weight: 500;
+}
+
+.lead-info-value.telefone {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: var(--leads-success);
+}
+
+/* ===== AÇÕES DO CARD ===== */
+.lead-card-actions {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-top: 1px solid var(--leads-border);
+}
+
+.lead-actions-single-row {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== BOTÕES DE AÇÃO ===== */
+.btn {
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    transition: all 0.2s ease;
+    min-width: 40px;
+    height: 40px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Botões específicos por cor */
+.btn-primary-action {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    border: none;
+}
+
+.btn-primary-action:hover:not(:disabled) {
+    background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+    color: white;
+}
+
+/* Estilos específicos para botões de ligar na versão mobile */
+.btn-primary-action.btn-ligar {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary-action.btn-ligar:hover:not(:disabled) {
+    background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn-primary-action.btn-ligar:disabled,
+.btn-primary-action.btn-ligar.disabled {
+    background: #6c757d !important;
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn-warning-action {
+    background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+    color: #212529;
+    border: none;
+}
+
+.btn-warning-action:hover:not(:disabled) {
+    background: linear-gradient(135deg, #e0a800 0%, #d39e00 100%);
+    color: #212529;
+}
+
+.btn-danger-action {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    border: none;
+}
+
+.btn-danger-action:hover:not(:disabled) {
+    background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+    color: white;
+}
+
+/* ===== STATUS BADGES ===== */
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: 0.1px;
+    text-align: center;
+    min-width: 60px;
+}
+
+.status-lead {
+    background: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #bbdefb;
+}
+
+.uf-badge {
+    background: #e8f5e8;
+    color: #28a745;
+    padding: 0.2rem 0.4rem;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border: 1px solid #c3e6c3;
+}
+
+/* ===== VENDEDOR INFO ===== */
+.vendor-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+    color: #666;
+    background: #f8f9fa;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    border-left: 3px solid #007bff;
+}
+
+.vendor-name {
+    color: #007bff !important;
+    font-weight: 600;
+}
+
+.vendor-code {
+    color: #6f42c1 !important;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    /* Mostrar cards mobile e esconder tabela */
+    .mobile-layout-indicator {
+        display: block;
+    }
+    
+    .mobile-cards-container {
+        display: block;
+    }
+    
+    .table-responsive {
+        display: none !important;
+    }
+    
+    .lead-card {
+        margin-bottom: 0.75rem;
+    }
+    
+    .lead-card-header {
+        padding: 0.75rem;
+    }
+    
+    .lead-card-nome h4 {
+        font-size: 1rem;
+    }
+    
+    .lead-card-info {
+        padding: 0.75rem;
+    }
+    
+    .lead-info-grid {
+        gap: 0.5rem;
+    }
+    
+    .lead-info-item {
+        padding: 0.4rem 0.6rem;
+    }
+    
+    .lead-info-label {
+        font-size: 0.75rem;
+        min-width: 70px;
+    }
+    
+    .lead-info-value {
+        font-size: 0.8rem;
+    }
+    
+    .lead-card-actions {
+        padding: 0.75rem;
+    }
+    
+    .lead-actions-single-row {
+        gap: 0.4rem;
+    }
+    
+    .btn {
+        min-width: 35px;
+        height: 35px;
+        font-size: 0.75rem;
+        padding: 0.4rem 0.6rem;
+    }
+    
+    .status-badge {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.4rem;
+        min-width: 50px;
+    }
+    
+    .uf-badge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lead-card-header {
+        padding: 0.5rem;
+    }
+    
+    .lead-card-nome h4 {
+        font-size: 0.9rem;
+    }
+    
+    .lead-card-fantasia {
+        font-size: 0.8rem;
+    }
+    
+    .lead-card-info {
+        padding: 0.5rem;
+    }
+    
+    .lead-info-item {
+        padding: 0.3rem 0.5rem;
+    }
+    
+    .lead-info-label {
+        font-size: 0.7rem;
+        min-width: 60px;
+    }
+    
+    .lead-info-value {
+        font-size: 0.75rem;
+    }
+    
+    .lead-card-actions {
+        padding: 0.5rem;
+    }
+    
+    .lead-actions-single-row {
+        gap: 0.3rem;
+    }
+    
+    .btn {
+        min-width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.5rem;
+    }
+    
+    .status-badge {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.3rem;
+        min-width: 45px;
+    }
+    
+    .uf-badge {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.25rem;
+    }
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lead-card {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+/* ===== MELHORIAS DE ACESSIBILIDADE ===== */
+.btn:focus {
+    outline: 2px solid var(--leads-primary);
+    outline-offset: 2px;
+}
+
+/* ===== OTIMIZAÇÕES DE PERFORMANCE ===== */
+.lead-card,
+.lead-info-item {
+    will-change: transform;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

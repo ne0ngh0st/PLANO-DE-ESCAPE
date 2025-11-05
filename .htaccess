@@ -1,0 +1,76 @@
+RewriteEngine On
+# Caminhos relativos são sempre relativos ao diretório onde o .htaccess está
+# Se o .htaccess está em htdocs/Site/, então pages/... sempre aponta para htdocs/Site/pages/...
+
+# ===== MODO MANUTENÇÃO =====
+# DESCOMENTE A LINHA ABAIXO PARA ATIVAR O MODO MANUTENÇÃO:
+# RewriteRule ^(.*)$ index_manutencao.php [L]
+
+# Permitir arquivos de teste e debug
+RewriteCond %{REQUEST_URI} ^/(Site/)?(test_|debug_|check_|testar-).*\.php$ [NC]
+RewriteRule ^ - [L]
+
+# Permitir acesso a arquivos AJAX, API, CRUD, CALENDAR e MANAGEMENT
+RewriteCond %{REQUEST_URI} ^/(Site/)?includes/(ajax|api|crud|calendar|management)/.*\.php$ [NC]
+RewriteRule ^ - [L]
+
+# Arquivos estáticos (CSS, JS, imagens) - permitir acesso direto
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} \.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot|json)$ [NC]
+RewriteRule ^ - [L]
+
+# Arquivos PHP na raiz - permitir acesso direto
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} \.php$ [NC]
+RewriteRule ^ - [L]
+
+# Bloquear acesso direto a pastas sensíveis via HTTP (mas permite includes via PHP)
+RewriteCond %{REQUEST_URI} ^/(Site/)?includes/(auth|components|config|database|reports|utils|volatility)/.*$ [NC]
+RewriteCond %{REQUEST_URI} !^/(Site/)?includes/(ajax|api|crud|calendar|management)/.*$ [NC]
+RewriteRule ^ - [F,L]
+
+# Bloquear pastas especiais
+RewriteCond %{REQUEST_URI} ^/(Site/)?\.XLSX/ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/(Site/)?\.SQL/ [NC]
+RewriteRule ^ - [F,L]
+
+# Páginas admin com URLs limpas
+RewriteRule ^(Site/)?admin/gestao-unificado$ pages/GESTAO/admin_gestao_unificado.php [L]
+RewriteRule ^(Site/)?admin/security-monitor$ admin/security-monitor.php [L]
+
+# Páginas principais com URLs limpas (home dinâmica por perfil)
+# Funciona tanto com /Site/home quanto /home
+RewriteRule ^(Site/)?home$ home.php [L]
+
+RewriteRule ^(Site/)?leads$ pages/COMERCIAL/leads.php [L]
+RewriteRule ^(Site/)?pedidos-abertos$ pages/COMERCIAL/pedidos_abertos.php [L]
+RewriteRule ^(Site/)?carteira-teste$ pages/COMERCIAL/carteira_teste_otimizada.php [L]
+RewriteRule ^(Site/)?carteira-admin$ pages/GESTAO/carteira_admin_diretor_ultra.php [L]
+RewriteRule ^(Site/)?home-comercial$ pages/COMERCIAL/home-comercial.php [L]
+RewriteRule ^(Site/)?cadastro$ pages/SISTEMA/cadastro.php [L]
+RewriteRule ^(Site/)?calendario$ pages/SISTEMA/calendario.php [L]
+RewriteRule ^(Site/)?perfil$ pages/SISTEMA/perfil_novo.php [L]
+RewriteRule ^(Site/)?register$ pages/SISTEMA/register.php [L]
+RewriteRule ^(Site/)?logout$ pages/SISTEMA/logout.php [L]
+RewriteRule ^(Site/)?licitacoes$ pages/LICITACAO/licitacoes.php [L]
+RewriteRule ^(Site/)?contratos$ pages/LICITACAO/contratos.php [L]
+RewriteRule ^(Site/)?gestao-ligacoes$ pages/GESTAO/gestao_ligacoes.php [L]
+RewriteRule ^(Site/)?gestao-ecommerce$ pages/ECOMMERCE/gestao-ecommerce.php [L]
+RewriteRule ^(Site/)?dash$ pages/GESTAO/dash.php [L]
+RewriteRule ^(Site/)?dashboard-volatilidade$ pages/GESTAO/dashboard_volatilidade.php [L]
+
+# Páginas na pasta pages/ (com subpastas - CRÍTICO: caminhos relativos ao .htaccess)
+# Em produção, quando DocumentRoot é htdocs, caminhos relativos funcionam corretamente
+# porque o .htaccess está em htdocs/Site/
+RewriteRule ^(Site/)?orcamentos$ pages/COMERCIAL/ORCAMENTO/orcamentos.php [L]
+RewriteRule ^(Site/)?detalhes-gerenciador$ pages/LICITACAO/detalhes_gerenciador.php [L]
+
+# Aprovação de orçamentos (com hash)
+RewriteRule ^(Site/)?aprovar/([a-zA-Z0-9-]+)$ pages/COMERCIAL/ORCAMENTO/aprovar.php?hash=$2 [L,QSA]
+RewriteRule ^(Site/)?aprovar-orcamento/([a-zA-Z0-9-]+)$ pages/COMERCIAL/ORCAMENTO/aprovar-orcamento.php?hash=$2 [L,QSA]
+RewriteRule ^(Site/)?aprovar-local/([a-zA-Z0-9-]+)$ pages/COMERCIAL/ORCAMENTO/aprovar-local.php?hash=$2 [L,QSA]
+
+# Redirecionar para index se não encontrar (última regra)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]

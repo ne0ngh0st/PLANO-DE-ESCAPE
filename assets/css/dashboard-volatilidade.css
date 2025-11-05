@@ -1,0 +1,897 @@
+/* Dashboard de Volatilidade - Estilos específicos */
+
+/* Seções de KPI */
+.kpi-section {
+    margin-bottom: 2rem;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.section-title i {
+    font-size: 1.3rem;
+}
+
+/* Cards de métricas compactos */
+.metric-card-compact {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: visible;
+    min-height: 160px;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.metric-card-compact:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+/* Conteúdo dos cards compactos */
+.metric-card-compact .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0;
+}
+
+/* Cards de métricas modernos seguindo o padrão do sistema */
+.metric-card-modern {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card-modern:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+/* Header do card de métrica */
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+/* Header específico para cards compactos */
+.metric-card-compact .metric-header {
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    color: var(--dark-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Labels menores para cards compactos */
+.metric-card-compact .metric-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+}
+
+.metric-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Ícones menores para cards compactos */
+.metric-card-compact .metric-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+}
+
+/* Ícones específicos para cada tipo de contato */
+.metric-icon.whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+}
+
+.metric-icon.presencial {
+    background: linear-gradient(135deg, #FF6B6B 0%, #E53E3E 100%);
+}
+
+.metric-icon.ligacao {
+    background: linear-gradient(135deg, #4ECDC4 0%, #38B2AC 100%);
+}
+
+.metric-icon.email {
+    background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);
+}
+
+.metric-icon.clientes {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.metric-icon.ativos {
+    background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+}
+
+.metric-icon.inativos {
+    background: linear-gradient(135deg, #F44336 0%, #D32F2F 100%);
+}
+
+.metric-icon.inativando {
+    background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+/* Valores menores para cards compactos */
+.metric-card-compact .metric-value {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.metric-change {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 500;
+}
+
+/* Mudanças menores para cards compactos */
+.metric-card-compact .metric-change {
+    font-size: 0.75rem;
+    gap: 0.2rem;
+}
+
+.metric-change.positive {
+    color: var(--success-color);
+}
+
+.metric-change.negative {
+    color: var(--danger-color);
+}
+
+.metric-change.neutral {
+    color: var(--gray);
+}
+
+.metric-change i {
+    font-size: 0.9rem;
+}
+
+/* Container de gráficos */
+.chart-container {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.chart-container:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Estilos específicos para gráficos */
+.chart-container canvas {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+.chart-container .chart-wrapper {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+/* Prevenir redimensionamento infinito */
+.chart-container .chart-wrapper canvas {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.chart-container h5 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chart-container h5 i {
+    color: #667eea;
+}
+
+/* Alertas */
+.alert-item {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.alert-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.alert-item.critica {
+    border-left-color: var(--danger-color);
+    background: #ffebee;
+}
+
+.alert-item.alta {
+    border-left-color: var(--warning-color);
+    background: #fff3e0;
+}
+
+.alert-item.media {
+    border-left-color: #ffc107;
+    background: #fffde7;
+}
+
+.alert-item.baixa {
+    border-left-color: var(--success-color);
+    background: #e8f5e8;
+}
+
+
+/* Títulos dos gráficos */
+.chart-container h5 {
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chart-container h5 i {
+    color: var(--primary-color);
+}
+
+/* Badges de comparação */
+.comparison-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--danger-color);
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Indicadores de tendência */
+.trend-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.trend-indicator.positive {
+    background: rgba(76, 175, 80, 0.2);
+    color: var(--success-color);
+}
+
+.trend-indicator.negative {
+    background: rgba(244, 67, 54, 0.2);
+    color: var(--danger-color);
+}
+
+.trend-indicator.neutral {
+    background: rgba(117, 117, 117, 0.2);
+    color: var(--gray);
+}
+
+/* Loading states */
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 8px;
+    height: 20px;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .metric-value {
+        font-size: 2rem;
+    }
+    
+    .chart-container {
+        padding: 1rem;
+    }
+    
+    .page-header {
+        padding: 1.5rem 0;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .filters-section {
+        padding: 1rem;
+    }
+    
+    .metric-card {
+        padding: 1rem;
+    }
+    
+    /* Cards compactos em mobile */
+    .metric-card-compact {
+        min-height: 140px;
+        padding: 0.75rem;
+    }
+    
+    .metric-card-compact .metric-value {
+        font-size: 1.6rem;
+    }
+    
+    .metric-card-compact .metric-label {
+        font-size: 0.75rem;
+    }
+    
+    .metric-card-compact .metric-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .metric-value {
+        font-size: 1.8rem;
+    }
+    
+    .chart-container {
+        padding: 0.75rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .metric-card {
+        padding: 0.75rem;
+    }
+    
+    /* Cards compactos em telas muito pequenas */
+    .metric-card-compact {
+        min-height: 120px;
+        padding: 0.5rem;
+    }
+    
+    .metric-card-compact .metric-value {
+        font-size: 1.4rem;
+    }
+    
+    .metric-card-compact .metric-label {
+        font-size: 0.7rem;
+    }
+    
+    .metric-card-compact .metric-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    
+    .metric-card-compact .metric-change {
+        font-size: 0.7rem;
+    }
+}
+
+/* Botão de coleta manual */
+#btnColetarMetricas {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#btnColetarMetricas:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#btnColetarMetricas:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#btnColetarMetricas i {
+    margin-right: 0.5rem;
+}
+
+/* Animações de entrada */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Tooltips customizados */
+.tooltip-custom {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip-custom::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.tooltip-custom:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estados de erro e sucesso */
+.status-success {
+    color: var(--success-color);
+    background: rgba(76, 175, 80, 0.1);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--success-color);
+}
+
+.status-warning {
+    color: var(--warning-color);
+    background: rgba(255, 152, 0, 0.1);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--warning-color);
+}
+
+.status-error {
+    color: var(--danger-color);
+    background: rgba(244, 67, 54, 0.1);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--danger-color);
+}
+
+/* ===== MODO ESCURO - DASHBOARD DE VOLATILIDADE ===== */
+[data-theme="dark"] .dashboard-main {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .dashboard-container {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .dashboard-layout {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .welcome-section {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .welcome-section h2 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .welcome-section h2 i {
+    color: #ff8f00 !important;
+}
+
+[data-theme="dark"] .welcome-section p {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .badge {
+    background: linear-gradient(135deg, #ff8f00 0%, #ff9800 100%) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .kpi-section {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .section-title {
+    color: #ffffff !important;
+    border-bottom: 2px solid rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .section-title i {
+    color: #ff8f00 !important;
+}
+
+[data-theme="dark"] .metric-card-compact {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .metric-card-compact:hover {
+    box-shadow: 0 4px 20px rgba(255, 152, 0, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+[data-theme="dark"] .metric-label {
+    color: #ff8f00 !important;
+}
+
+[data-theme="dark"] .metric-value {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .metric-change.positive {
+    color: #4caf50 !important;
+}
+
+[data-theme="dark"] .metric-change.negative {
+    color: #f44336 !important;
+}
+
+[data-theme="dark"] .metric-change.neutral {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .chart-container {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .chart-container:hover {
+    box-shadow: 0 4px 20px rgba(255, 152, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .chart-container h5 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .chart-container h5 i {
+    color: #ff8f00 !important;
+}
+
+[data-theme="dark"] .alert-item {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .alert-item:hover {
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .alert-item.critica {
+    border-left-color: #f44336 !important;
+    background: rgba(244, 67, 54, 0.1) !important;
+}
+
+[data-theme="dark"] .alert-item.alta {
+    border-left-color: #ff8f00 !important;
+    background: rgba(255, 152, 0, 0.1) !important;
+}
+
+[data-theme="dark"] .alert-item.media {
+    border-left-color: #ff9800 !important;
+    background: rgba(255, 152, 0, 0.1) !important;
+}
+
+[data-theme="dark"] .alert-item.baixa {
+    border-left-color: #4caf50 !important;
+    background: rgba(76, 175, 80, 0.1) !important;
+}
+
+[data-theme="dark"] .btn-primary {
+    background: linear-gradient(135deg, #ff8f00 0%, #ff9800 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background: linear-gradient(135deg, #ff9800 0%, #ff8f00 100%) !important;
+    border-color: #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn-outline-success {
+    border-color: #4caf50 !important;
+    color: #4caf50 !important;
+}
+
+[data-theme="dark"] .btn-outline-success:hover {
+    background: #4caf50 !important;
+    border-color: #4caf50 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn-outline-primary {
+    border-color: #ff8f00 !important;
+    color: #ff8f00 !important;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background: #ff8f00 !important;
+    border-color: #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn-outline-secondary {
+    border-color: #ffcc80 !important;
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+    background: #ffcc80 !important;
+    border-color: #ffcc80 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .card {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .card-header {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border-bottom: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .card-header h6 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .card-body {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .table {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .table td {
+    color: #ffffff !important;
+    border-color: rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover {
+    background: rgba(255, 152, 0, 0.1) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .badge.bg-success {
+    background: #4caf50 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .badge.bg-primary {
+    background: #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .badge.bg-secondary {
+    background: #ffcc80 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .text-muted {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .alert {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .alert-danger {
+    background: rgba(244, 67, 54, 0.1) !important;
+    border-color: rgba(244, 67, 54, 0.3) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .alert-danger i {
+    color: #f44336 !important;
+}
+
+[data-theme="dark"] .container-fluid {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn i {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .text-success {
+    color: #4caf50 !important;
+}
+
+[data-theme="dark"] .text-primary {
+    color: #ff8f00 !important;
+}
+
+[data-theme="dark"] .text-secondary {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .comparison-badge {
+    background: #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .trend-indicator.positive {
+    background: rgba(76, 175, 80, 0.2) !important;
+    color: #4caf50 !important;
+}
+
+[data-theme="dark"] .trend-indicator.negative {
+    background: rgba(244, 67, 54, 0.2) !important;
+    color: #f44336 !important;
+}
+
+[data-theme="dark"] .trend-indicator.neutral {
+    background: rgba(255, 152, 0, 0.2) !important;
+    color: #ff8f00 !important;
+}
+
+[data-theme="dark"] .status-success {
+    color: #4caf50 !important;
+    background: rgba(76, 175, 80, 0.1) !important;
+    border-left: 4px solid #4caf50 !important;
+}
+
+[data-theme="dark"] .status-warning {
+    color: #ff8f00 !important;
+    background: rgba(255, 152, 0, 0.1) !important;
+    border-left: 4px solid #ff8f00 !important;
+}
+
+[data-theme="dark"] .status-error {
+    color: #f44336 !important;
+    background: rgba(244, 67, 54, 0.1) !important;
+    border-left: 4px solid #f44336 !important;
+}
+
+[data-theme="dark"] .loading-skeleton {
+    background: linear-gradient(90deg, rgba(255, 152, 0, 0.1) 25%, rgba(255, 152, 0, 0.2) 50%, rgba(255, 152, 0, 0.1) 75%) !important;
+}
+
+[data-theme="dark"] .tooltip-custom::after {
+    background: #333 !important;
+    color: #ffffff !important;
+}

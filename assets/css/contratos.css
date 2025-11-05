@@ -1,0 +1,2877 @@
+/* Contratos - Tema Claro e Limpo */
+
+/* Background Claro e Limpo */
+body:has(.page-header) .dashboard-main {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Cabeçalho da Página - Tema Claro */
+.page-header {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.page-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.page-header-left {
+    flex: 1;
+}
+
+.page-header-right {
+    flex-shrink: 0;
+}
+
+.page-header-content h1 {
+    color: #1e293b;
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.page-header-content h1 i {
+    font-size: 1.75rem;
+    color: #3b82f6;
+}
+
+.page-subtitle {
+    color: #64748b;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Cards de Resumo - Tema Claro */
+.resumo-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.resumo-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    position: relative;
+    text-align: center;
+}
+
+.resumo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-contratado {
+    border-left-color: #3b82f6;
+}
+
+.card-consumido {
+    border-left-color: #f59e0b;
+}
+
+.card-saldo {
+    border-left-color: #10b981;
+}
+
+.card-percentual {
+    border-left-color: #8b5cf6;
+}
+
+.card-ata {
+    border-left-color: #6366f1;
+}
+
+
+.resumo-card-content {
+    width: 100%;
+}
+
+.resumo-card-content h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    line-height: 1.2;
+}
+
+/* Cores específicas para cada título */
+.card-ata .resumo-card-content h3 {
+    color: #6366f1;
+}
+
+.card-contratado .resumo-card-content h3 {
+    color: #3b82f6;
+}
+
+.card-consumido .resumo-card-content h3 {
+    color: #f59e0b;
+}
+
+.card-saldo .resumo-card-content h3 {
+    color: #10b981;
+}
+
+.card-percentual .resumo-card-content h3 {
+    color: #8b5cf6;
+}
+
+.resumo-card-valor {
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.25px;
+}
+
+/* Seção de Contratos - Tema Claro */
+.contratos-section {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+    margin-top: 1rem;
+    gap: 1.5rem;
+}
+
+.section-header h2 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.section-header h2 i {
+    color: #3b82f6;
+}
+
+.section-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    background: #3b82f6;
+    color: #ffffff;
+    border: 1px solid #3b82f6;
+    border-radius: 8px;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Grid de Contratos - Tema Claro */
+.contratos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    /* Melhorar performance das animações */
+    contain: layout style;
+    will-change: auto;
+}
+
+.contrato-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* Otimizações para melhor performance */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Estado inicial dos cards para evitar reorganização visível */
+.contrato-card.loading {
+    opacity: 0;
+    transform: translateY(20px) translateZ(0);
+}
+
+.contrato-card.loaded {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.contrato-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #ef4444; /* Vermelho padrão para pouco consumo */
+    transition: all 0.3s ease;
+    z-index: 1;
+    border-radius: 4px 0 0 4px;
+}
+
+/* Cores baseadas na porcentagem de consumo - INVERTIDAS */
+.contrato-card.status-critico::before {
+    background: #ef4444; /* Vermelho - pouco consumido (0-29%) - precisa consumir mais */
+}
+
+.contrato-card.status-alerta::before {
+    background: #f59e0b; /* Amarelo - consumo médio (30-69%) */
+}
+
+.contrato-card.status-normal::before {
+    background: #10b981; /* Verde - bem consumido (70%+) - meta atingida */
+}
+
+.contrato-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Cabeçalho do Card - Tema Claro */
+.contrato-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+    z-index: 1;
+}
+
+.gerenciador-nome {
+    color: #1e293b;
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gerenciador-nome i {
+    color: #3b82f6;
+    font-size: 1rem;
+}
+
+.total-contratos {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+}
+
+/* Botão de Expansão - Tema Claro */
+.expand-button-container {
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-expand {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-expand:hover {
+    background: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-expand i {
+    transition: transform 0.3s ease;
+}
+
+.btn-expand.expanded i {
+    transform: rotate(180deg);
+}
+
+/* Valores - Tema Claro */
+.contrato-valores {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.contrato-valores.collapsed {
+    max-height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.contrato-valores.expanded {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.valor-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.valor-label {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.valor-amount {
+    color: #1e293b;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.valor-consumido {
+    color: #f59e0b;
+}
+
+.valor-saldo {
+    color: #10b981;
+}
+
+/* Barra de Progresso - Tema Claro */
+.progress-container {
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.progress-container.collapsed {
+    max-height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.progress-container.expanded {
+    max-height: 100px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.progress-header span {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.progress-percentual {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e2e8f0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%); /* Vermelho padrão */
+    border-radius: 8px;
+    transition: all 0.6s ease;
+    position: relative;
+}
+
+/* Cores da barra de progresso baseadas na porcentagem - INVERTIDAS */
+.status-critico .progress-fill {
+    background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%); /* Vermelho - pouco consumido (0-29%) */
+}
+
+.status-alerta .progress-fill {
+    background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%); /* Amarelo - consumo médio (30-69%) */
+}
+
+.status-normal .progress-fill {
+    background: linear-gradient(90deg, #10b981 0%, #059669 100%); /* Verde - bem consumido (70%+) */
+}
+
+/* Ações do Card - Tema Claro */
+.contrato-actions {
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-detalhes {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    border-radius: 8px;
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    height: 44px;
+}
+
+.btn-detalhes:hover {
+    background: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-documentos {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 120px;
+    height: 44px;
+}
+
+.btn-documentos:hover {
+    background: #f59e0b;
+    color: #ffffff;
+    border-color: #f59e0b;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+/* Botões de ação compactos - apenas ícones */
+.btn-add-compact {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+}
+
+.btn-add-compact:hover {
+    background: #10b981;
+    color: #ffffff;
+    border-color: #10b981;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-danger-compact {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+}
+
+.btn-danger-compact:hover {
+    background: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+/* Botões compactos para detalhes e documentos */
+.btn-detalhes-compact {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+}
+
+.btn-detalhes-compact:hover {
+    background: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-documentos-compact {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+}
+
+.btn-documentos-compact:hover {
+    background: #f59e0b;
+    color: #ffffff;
+    border-color: #f59e0b;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+/* Botões compactos para seção de ações */
+.btn-action-compact {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+}
+
+.btn-primary-compact:hover {
+    background: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary-compact:hover {
+    background: #10b981;
+    color: #ffffff;
+    border-color: #10b981;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-upload-compact:hover {
+    background: #f59e0b;
+    color: #ffffff;
+    border-color: #f59e0b;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.btn-refresh-compact:hover {
+    background: #6b7280;
+    color: #ffffff;
+    border-color: #6b7280;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+}
+
+/* Estado Vazio - Tema Claro */
+.empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #64748b;
+    position: relative;
+    z-index: 1;
+}
+
+.empty-icon {
+    margin-bottom: 1.5rem;
+}
+
+.empty-icon i {
+    font-size: 4rem;
+    color: #cbd5e1;
+}
+
+.empty-state h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 2rem 0;
+}
+
+.empty-info {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    text-align: left;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.info-warning {
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-left: 4px solid #f59e0b;
+}
+
+.info-info {
+    background: #dbeafe;
+    border: 1px solid #3b82f6;
+    border-left: 4px solid #3b82f6;
+}
+
+.info-error {
+    background: #fee2e2;
+    border: 1px solid #ef4444;
+    border-left: 4px solid #ef4444;
+}
+
+.info-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.info-warning .info-icon {
+    background: #f59e0b;
+    color: #ffffff;
+}
+
+.info-info .info-icon {
+    background: #3b82f6;
+    color: #ffffff;
+}
+
+.info-error .info-icon {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-content h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.info-content p {
+    margin: 0 0 0.5rem 0;
+    color: #374151;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.info-content code {
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 0.125rem 0.375rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.info-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+}
+
+.info-action:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.empty-actions {
+    margin-top: 2rem;
+}
+
+.btn-diagnostico {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #8b5cf6;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-diagnostico:hover {
+    background: #7c3aed;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px -5px rgba(139, 92, 246, 0.3);
+}
+
+/* ========================================
+   MODAIS ESPECÍFICOS PARA CONTRATOS
+   ======================================== */
+
+/* Modal Base - Tema Claro e Moderno */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    backdrop-filter: blur(4px);
+}
+
+.modal.active {
+    display: flex !important;
+}
+
+/* Garantir que o modal de upload funcione corretamente */
+#modalUpload.modal.active {
+    display: flex !important;
+}
+
+.modal-content {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: modalSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Cabeçalho do Modal - Especificidade alta */
+.modal .modal-header,
+#modalDetalhes .modal-header,
+#modalGerenciador .modal-header,
+#modalContrato .modal-header,
+#modalUpload .modal-header,
+#modalContratos .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 2.5rem 2rem 2.5rem !important;
+    border-bottom: 1px solid #e2e8f0;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    border-radius: 16px 16px 0 0;
+    margin: 0 !important;
+}
+
+.modal-header h2 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: -0.025em;
+}
+
+.modal-header h2 i {
+    color: #3b82f6;
+    font-size: 1.375rem;
+}
+
+.modal-close {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 1.25rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-close::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.modal-close:hover::before {
+    opacity: 1;
+}
+
+.modal-close:hover {
+    border-color: #ef4444;
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+.modal-close i {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.modal-close:hover i {
+    transform: rotate(90deg);
+}
+
+/* Corpo do Modal - Especificidade alta para sobrescrever modais.css */
+.modal .modal-body,
+#modalDetalhes .modal-body,
+#modalGerenciador .modal-body,
+#modalContrato .modal-body,
+#modalUpload .modal-body,
+#modalContratos .modal-body {
+    padding: 2.5rem !important;
+    overflow-y: auto;
+    color: #475569;
+    line-height: 1.6;
+    flex: 1;
+    margin: 0 !important;
+}
+
+/* Tamanhos específicos dos modais */
+.modal-content.modal-medium {
+    max-width: 600px;
+}
+
+.modal-content.modal-large {
+    max-width: 900px;
+}
+
+.modal-content.modal-extra-large {
+    max-width: 1200px;
+    width: 95%;
+}
+
+/* Avisos e Info Boxes - Tema Claro */
+div[style*="background: #fff3e0"] {
+    background: #fef3c7 !important;
+    border: 1px solid #f59e0b !important;
+    border-left: 4px solid #f59e0b !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+div[style*="background: #e3f2fd"] {
+    background: #dbeafe !important;
+    border: 1px solid #3b82f6 !important;
+    border-left: 4px solid #3b82f6 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+div[style*="background: #ffebee"] {
+    background: #fee2e2 !important;
+    border: 1px solid #ef4444 !important;
+    border-left: 4px solid #ef4444 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+div[style*="background: #fff3e0"] p,
+div[style*="background: #e3f2fd"] p,
+div[style*="background: #ffebee"] p {
+    color: #374151 !important;
+}
+
+div[style*="background: #fff3e0"] strong,
+div[style*="background: #e3f2fd"] strong,
+div[style*="background: #ffebee"] strong {
+    color: #1f2937 !important;
+}
+
+div[style*="background: #fff3e0"] a,
+div[style*="background: #e3f2fd"] a,
+div[style*="background: #ffebee"] a {
+    background: #3b82f6 !important;
+    border: 1px solid #3b82f6 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+div[style*="background: #fff3e0"] a:hover,
+div[style*="background: #e3f2fd"] a:hover,
+div[style*="background: #ffebee"] a:hover {
+    background: #2563eb !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+div[style*="background: #f8f9fa"] {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-left: 3px solid #3b82f6 !important;
+}
+
+div[style*="background: #f8f9fa"] div {
+    color: #475569 !important;
+}
+
+/* Alertas de Status - Tema Claro */
+.status-alerts {
+    margin-bottom: 2rem;
+}
+
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.alert-warning {
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-left: 4px solid #f59e0b;
+}
+
+.alert-info {
+    background: #dbeafe;
+    border: 1px solid #3b82f6;
+    border-left: 4px solid #3b82f6;
+}
+
+.alert-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.alert-warning .alert-icon {
+    background: #f59e0b;
+    color: #ffffff;
+}
+
+.alert-info .alert-icon {
+    background: #3b82f6;
+    color: #ffffff;
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-content h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.alert-content p {
+    margin: 0 0 1rem 0;
+    color: #374151;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.alert-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alert-action:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Informações de Órgãos - Tema Claro */
+.orgaos-info {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #3b82f6;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.orgaos-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.orgaos-header i {
+    font-size: 0.875rem;
+    color: #3b82f6;
+}
+
+.orgaos-content {
+    font-size: 0.875rem;
+    color: #1e293b;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.orgaos-more {
+    color: #3b82f6;
+    font-weight: 700;
+}
+
+
+/* Responsividade - Tema Claro */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 1.5rem;
+    }
+
+    .page-header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 0.875rem;
+    }
+
+    /* Alertas responsivos */
+    .alert {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .alert-icon {
+        align-self: center;
+    }
+
+    /* Cards de resumo responsivos */
+    .resumo-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .resumo-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .resumo-card-valor {
+        font-size: 1.25rem;
+    }
+
+    /* Seção de contratos responsiva */
+    .contratos-section {
+        padding: 1.5rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .contratos-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contrato-card {
+        padding: 1.25rem;
+    }
+
+    /* Informações de órgãos responsivas */
+    .orgaos-info {
+        padding: 0.75rem;
+    }
+
+    .orgaos-header {
+        font-size: 0.7rem;
+    }
+
+    .orgaos-content {
+        font-size: 0.8rem;
+    }
+
+    /* Estado vazio responsivo */
+    .empty-state {
+        padding: 2rem 1rem;
+    }
+
+    .empty-state h3 {
+        font-size: 1.25rem;
+    }
+
+    .empty-info {
+        max-width: 100%;
+    }
+
+    .info-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .info-icon {
+        align-self: center;
+    }
+
+    /* Modal responsivo */
+    .modal-content {
+        max-width: 100%;
+        margin: 1rem;
+    }
+    
+    .modal-content.modal-extra-large {
+        width: 98%;
+        max-width: 98%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Cards de resumo em coluna única */
+    .resumo-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cabeçalho compacto */
+    .page-header {
+        padding: 1rem;
+    }
+
+    .page-header-content h1 {
+        font-size: 1.25rem;
+    }
+
+    .resumo-card-content h3 {
+        font-size: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .resumo-card-valor {
+        font-size: 1.125rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.125rem;
+    }
+
+    /* Alertas compactos */
+    .alert {
+        padding: 1rem;
+    }
+
+    .alert-content h4 {
+        font-size: 0.875rem;
+    }
+
+    .alert-content p {
+        font-size: 0.8rem;
+    }
+
+    /* Cards de contrato compactos */
+    .contrato-card {
+        padding: 1rem;
+    }
+
+    .gerenciador-nome {
+        font-size: 1rem;
+    }
+
+    .valor-amount {
+        font-size: 0.9rem;
+    }
+
+    /* Estado vazio compacto */
+    .empty-state {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .empty-state h3 {
+        font-size: 1.125rem;
+    }
+
+    .info-card {
+        padding: 1rem;
+    }
+
+    .info-content h4 {
+        font-size: 0.875rem;
+    }
+
+    .info-content p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Botões de Ação */
+.section-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    color: #495057;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-action:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+    color: #343a40;
+}
+
+.btn-action.btn-primary {
+    background: #1a237e;
+    border-color: #1a237e;
+    color: white;
+}
+
+.btn-action.btn-primary:hover {
+    background: #1565c0;
+    border-color: #1565c0;
+}
+
+.btn-action.btn-secondary {
+    background: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+.btn-action.btn-secondary:hover {
+    background: #5a6268;
+    border-color: #5a6268;
+}
+
+.btn-edit, .btn-add {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.btn-edit {
+    background: #ffc107;
+    color: #212529;
+}
+
+.btn-edit:hover {
+    background: #e0a800;
+}
+
+.btn-add {
+    background: #28a745;
+    color: white;
+}
+
+.btn-add:hover {
+    background: #218838;
+}
+
+/* Modais atualizados */
+.modal-content.modal-medium {
+    max-width: 600px;
+}
+
+.modal-content.modal-large {
+    max-width: 800px;
+}
+
+.modal-content.modal-extra-large {
+    max-width: 1400px;
+    width: 95%;
+}
+
+/* ========================================
+   FORMULÁRIOS DOS MODAIS - CONTRATOS
+   ======================================== */
+
+/* Grupos de Formulário - Especificidade alta */
+.modal .form-group,
+#modalDetalhes .form-group,
+#modalGerenciador .form-group,
+#modalContrato .form-group,
+#modalUpload .form-group,
+#modalContratos .form-group {
+    margin-bottom: 2rem !important;
+    padding: 0 !important;
+}
+
+.form-help {
+    display: block;
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Labels dos Formulários */
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.9rem;
+    letter-spacing: 0.025em;
+}
+
+/* Campos de Input */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #ffffff;
+    color: #374151;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 0 4px 12px rgba(59, 130, 246, 0.15);
+    transform: translateY(-1px);
+    background: #ffffff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+/* Textarea específico */
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+/* Ações do Formulário - Especificidade alta */
+.modal .form-actions,
+#modalDetalhes .form-actions,
+#modalGerenciador .form-actions,
+#modalContrato .form-actions,
+#modalUpload .form-actions,
+#modalContratos .form-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    margin-top: 3rem !important;
+    padding-top: 2.5rem !important;
+    border-top: 2px solid #f1f5f9;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Botões dos Formulários */
+.btn-cancel, .btn-save {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.025em;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.btn-cancel {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+}
+
+.btn-cancel:hover {
+    background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+}
+
+.btn-save {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-save:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Efeito de brilho nos botões */
+.btn-cancel::before,
+.btn-save::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-cancel:hover::before,
+.btn-save:hover::before {
+    left: 100%;
+}
+
+/* Estados dos botões */
+.btn-cancel:active,
+.btn-save:active {
+    transform: translateY(0);
+}
+
+.btn-cancel:disabled,
+.btn-save:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn-cancel:disabled:hover,
+.btn-save:disabled:hover {
+    transform: none !important;
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+}
+
+/* Notificações */
+.notificacao {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 1100;
+    max-width: 400px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.notificacao.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.notificacao-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.notificacao-content i {
+    font-size: 1.125rem;
+}
+
+.notificacao-success .notificacao-content i {
+    color: #28a745;
+}
+
+.notificacao-error .notificacao-content i {
+    color: #dc3545;
+}
+
+.notificacao-info .notificacao-content i {
+    color: #17a2b8;
+}
+
+.notificacao-close {
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.notificacao-close:hover {
+    background: #f8f9fa;
+    color: #495057;
+}
+
+/* ========================================
+   RESPONSIVIDADE DOS MODAIS - CONTRATOS
+   ======================================== */
+
+/* Responsividade geral dos modais */
+@media (max-width: 768px) {
+    .modal {
+        padding: 0.5rem;
+    }
+    
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        max-height: 95vh;
+        border-radius: 12px;
+    }
+    
+    .modal .modal-header,
+    #modalDetalhes .modal-header,
+    #modalGerenciador .modal-header,
+    #modalContrato .modal-header,
+    #modalUpload .modal-header,
+    #modalContratos .modal-header {
+        padding: 2rem 2rem 1.5rem 2rem !important;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.25rem;
+    }
+    
+    .modal .modal-body,
+    #modalDetalhes .modal-body,
+    #modalGerenciador .modal-body,
+    #modalContrato .modal-body,
+    #modalUpload .modal-body,
+    #modalContratos .modal-body {
+        padding: 2rem !important;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .btn-cancel, .btn-save {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        padding: 0.25rem;
+    }
+    
+    .modal-content {
+        border-radius: 8px;
+    }
+    
+    .modal .modal-header,
+    #modalDetalhes .modal-header,
+    #modalGerenciador .modal-header,
+    #modalContrato .modal-header,
+    #modalUpload .modal-header,
+    #modalContratos .modal-header {
+        padding: 1.5rem 1.5rem 1rem 1.5rem !important;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.125rem;
+    }
+    
+    .modal .modal-body,
+    #modalDetalhes .modal-body,
+    #modalGerenciador .modal-body,
+    #modalContrato .modal-body,
+    #modalUpload .modal-body,
+    #modalContratos .modal-body {
+        padding: 1.5rem !important;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividade adicional para novos elementos */
+@media (max-width: 768px) {
+    .section-actions {
+        flex-direction: column;
+    }
+    
+    .btn-action {
+        justify-content: center;
+    }
+    
+    .notificacao {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
+
+/* Toggle Switch */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-slider {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background: #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid #cbd5e1;
+}
+
+.toggle-slider::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-slider {
+    background: #3b82f6;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-slider::before {
+    transform: translateX(26px);
+    background: white;
+}
+
+.toggle-label {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Botão de Exclusão */
+.btn-danger {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.btn-danger:active {
+    transform: translateY(0);
+}
+
+/* Barra de Pesquisa */
+.search-container {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    z-index: 10;
+    isolation: isolate;
+    flex: 1;
+}
+
+/* Garantir que não haja linhas indesejadas */
+.search-container::before,
+.search-container::after,
+.search-box::before,
+.search-box::after {
+    display: none !important;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0;
+    min-width: 400px;
+    max-width: 600px;
+    height: 56px;
+}
+
+.search-box:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-icon {
+    color: #64748b;
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+.search-box:focus-within .search-icon {
+    color: #3b82f6;
+}
+
+#searchInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.1rem;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+#searchInput::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.btn-clear-search {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+}
+
+.btn-clear-search:hover {
+    background: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+    transform: scale(1.05);
+}
+
+.search-results-info {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: #dbeafe;
+    border: 1px solid #3b82f6;
+    border-radius: 8px;
+    color: #1e40af;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-results-info i {
+    color: #3b82f6;
+}
+
+/* Animação para cards filtrados */
+.contrato-card.search-hidden {
+    display: none;
+}
+
+.contrato-card.search-highlight {
+    animation: searchHighlight 0.5s ease;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+@keyframes searchHighlight {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsividade do Toggle */
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
+    .section-actions {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .toggle-container {
+        margin-right: 0;
+        justify-content: center;
+    }
+    
+    /* Barra de pesquisa responsiva */
+    .search-container {
+        padding: 0;
+        margin-bottom: 0;
+        order: 1;
+    }
+    
+    .search-box {
+        padding: 0.875rem 1rem;
+        min-width: 100%;
+        max-width: 100%;
+        height: 48px;
+    }
+    
+    #searchInput {
+        font-size: 0.9rem;
+    }
+    
+    .search-results-info {
+        font-size: 0.8rem;
+        padding: 0.625rem 0.875rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* ========================================
+   MODAL DE UPLOAD DE CONTRATOS
+   ======================================== */
+
+/* Modal de Upload específico */
+#modalUpload .modal-content {
+    max-width: 800px;
+}
+
+#modalUpload .modal-body {
+    padding: 2.5rem !important;
+}
+
+/* Garantir espaçamento adequado em todos os modais */
+.modal-content {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.modal-content * {
+    box-sizing: border-box;
+}
+
+/* Seção de Upload */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Área de Upload */
+.upload-area {
+    border: 3px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+}
+
+.upload-area:hover::before {
+    opacity: 1;
+}
+
+.upload-area.drag-over {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #dbeafe 0%, #f1f5f9 100%);
+    transform: scale(1.02);
+}
+
+/* Conteúdo da área de upload */
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.upload-icon {
+    font-size: 3.5rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover .upload-icon {
+    color: #3b82f6;
+    transform: scale(1.1);
+}
+
+.upload-content h3 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.025em;
+}
+
+.upload-content p {
+    color: #64748b;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Botão de seleção de arquivos */
+.btn-select-files {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-select-files::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-select-files:hover::before {
+    left: 100%;
+}
+
+.btn-select-files:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Informações do Upload */
+.upload-info {
+    background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.upload-info h4 {
+    color: #1e293b;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: -0.025em;
+}
+
+.upload-info h4 i {
+    color: #3b82f6;
+    font-size: 1.125rem;
+}
+
+.upload-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.upload-info li {
+    color: #475569;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.upload-info li:last-child {
+    border-bottom: none;
+}
+
+.upload-info li::before {
+    content: "✓";
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+}
+
+/* Arquivos Selecionados */
+.selected-files {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.selected-files h4 {
+    color: #1e293b;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: -0.025em;
+}
+
+.selected-files h4 i {
+    color: #3b82f6;
+    font-size: 1.125rem;
+}
+
+.files-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.file-item:hover {
+    background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.file-info i {
+    color: #64748b;
+    font-size: 1.5rem;
+}
+
+.file-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.file-name {
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.file-size {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.btn-remove-file {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.btn-remove-file:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+/* Botão de Upload */
+#btnUpload {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    position: relative;
+    overflow: hidden;
+    min-width: 160px;
+    justify-content: center;
+}
+
+#btnUpload::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+#btnUpload:hover::before {
+    left: 100%;
+}
+
+#btnUpload:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+#btnUpload:disabled {
+    background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: 0 4px 12px rgba(156, 163, 175, 0.3);
+}
+
+#btnUpload:disabled:hover {
+    transform: none !important;
+    box-shadow: 0 4px 12px rgba(156, 163, 175, 0.3);
+}
+
+/* Responsividade do Upload */
+@media (max-width: 768px) {
+    .upload-area {
+        padding: 2rem 1rem;
+    }
+    
+    .upload-icon {
+        font-size: 2.5rem;
+    }
+    
+    .upload-content h3 {
+        font-size: 1.25rem;
+    }
+    
+    .upload-info,
+    .selected-files {
+        padding: 1.5rem;
+    }
+    
+    .file-item {
+        padding: 1rem;
+    }
+    
+    .file-info {
+        gap: 0.75rem;
+    }
+    
+    .file-info i {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .upload-area {
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .upload-content h3 {
+        font-size: 1.125rem;
+    }
+    
+    .upload-content p {
+        font-size: 0.9rem;
+    }
+    
+    .btn-select-files {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .upload-info,
+    .selected-files {
+        padding: 1rem;
+    }
+    
+    .file-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .file-info {
+        width: 100%;
+    }
+    
+    .btn-remove-file {
+        align-self: flex-end;
+    }
+}
+
+/* ========================================
+   ESTILOS PARA UPLOAD DE CONTRATOS (LEGADO)
+   ======================================== */
+
+/* Botão de Upload */
+.btn-upload {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-upload:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+/* Modal de Upload */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.upload-area {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.upload-area:hover {
+    border-color: #3b82f6;
+    background: #f1f5f9;
+}
+
+.upload-area.drag-over {
+    border-color: #3b82f6;
+    background: #dbeafe;
+    transform: scale(1.02);
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.upload-icon {
+    font-size: 3rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.upload-area:hover .upload-icon {
+    color: #3b82f6;
+}
+
+.upload-content h3 {
+    color: #1e293b;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.upload-content p {
+    color: #64748b;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.btn-select-files {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.btn-select-files:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* Informações do Upload */
+.upload-info {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.upload-info h4 {
+    color: #1e293b;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.upload-info h4 i {
+    color: #3b82f6;
+}
+
+.upload-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.upload-info li {
+    color: #475569;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.upload-info li:last-child {
+    border-bottom: none;
+}
+
+.upload-info li::before {
+    content: "•";
+    color: #3b82f6;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Arquivos Selecionados */
+.selected-files {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.selected-files h4 {
+    color: #1e293b;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.selected-files h4 i {
+    color: #3b82f6;
+}
+
+.files-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.file-item:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.file-info i {
+    color: #64748b;
+    font-size: 1.25rem;
+}
+
+.file-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.file-name {
+    color: #1e293b;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.file-size {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.btn-remove-file {
+    background: #ef4444;
+    color: white;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.btn-remove-file:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+}
+
+/* Notificações */
+.notification {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 10000;
+    max-width: 400px;
+    animation: slideIn 0.3s ease;
+}
+
+.notification-success {
+    border-left: 4px solid #10b981;
+}
+
+.notification-error {
+    border-left: 4px solid #ef4444;
+}
+
+.notification i {
+    font-size: 1.25rem;
+}
+
+.notification-success i {
+    color: #10b981;
+}
+
+.notification-error i {
+    color: #ef4444;
+}
+
+.notification span {
+    color: #1e293b;
+    font-weight: 500;
+    flex: 1;
+}
+
+.notification button {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.notification button:hover {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsividade para Upload */
+@media (max-width: 768px) {
+    .upload-area {
+        padding: 2rem 1rem;
+    }
+    
+    .upload-icon {
+        font-size: 2.5rem;
+    }
+    
+    .upload-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .upload-info {
+        padding: 1rem;
+    }
+    
+    .selected-files {
+        padding: 1rem;
+    }
+    
+    .file-item {
+        padding: 0.75rem;
+    }
+    
+    .notification {
+        top: 1rem;
+        right: 1rem;
+        left: 1rem;
+        max-width: none;
+    }
+}
+

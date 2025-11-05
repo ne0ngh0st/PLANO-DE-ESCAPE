@@ -1,0 +1,667 @@
+/* ========================================
+   CARDS METAS - Estilos para os cards de metas
+   ======================================== */
+
+/* Container principal dos cards de metas */
+.carteira-stats {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+.carteira-stats > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* Card principal de meta */
+.meta-card {
+    flex: 1;
+    min-height: 200px; /* Reduzido de 300px */
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Header do card de meta - Layout mais compacto */
+.meta-header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+}
+
+.meta-carteira-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid #0066cc;
+}
+
+.meta-carteira-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.meta-carteira-icon {
+    color: #0066cc;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 102, 204, 0.1);
+    border-radius: 8px;
+}
+
+.meta-carteira-info {
+    flex: 1;
+    text-align: left;
+}
+
+.meta-carteira-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1.2;
+}
+
+.meta-carteira-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-weight: 500;
+    margin-top: 0.2rem;
+}
+
+.meta-carteira-status {
+    margin-top: 0.3rem;
+}
+
+.meta-carteira-status .status-badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.meta-carteira-status .status-badge.abaixo {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+}
+
+.meta-carteira-status .status-badge.proximo {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+    color: #212529;
+    box-shadow: 0 2px 4px rgba(255, 193, 7, 0.3);
+}
+
+.meta-carteira-status .status-badge.atingida {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: white;
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+/* Barra de progresso - Mais compacta */
+.meta-progress-container {
+    margin: 1rem 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+.meta-progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.meta-progress-fill {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease, background 0.3s ease;
+    position: relative;
+}
+
+.meta-progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.meta-progress-fill.abaixo-meta {
+    background: linear-gradient(90deg, #dc3545, #c82333);
+}
+
+.meta-progress-fill.proximo-meta {
+    background: linear-gradient(90deg, #ffc107, #e0a800);
+}
+
+.meta-progress-fill.atingida {
+    background: linear-gradient(90deg, #28a745, #1e7e34);
+}
+
+.meta-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    padding: 0 !important;
+    position: relative;
+    width: 100%;
+}
+
+.meta-progress-text,
+.meta-progress-target {
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    background: transparent !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+    z-index: 2;
+}
+
+.meta-progress-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meta-progress-percentual {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.meta-progress-percentual.abaixo-meta {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+}
+
+.meta-progress-percentual.proximo-meta {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+    color: #212529;
+}
+
+.meta-progress-percentual.atingida {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: white;
+}
+
+/* Card de projeções e status - Layout mais compacto */
+.projecoes-status-card {
+    flex: 1;
+    min-height: 160px; /* Reduzido ainda mais para melhor aproveitamento */
+    display: flex;
+    flex-direction: column;
+}
+
+.projecoes-clientes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+}
+
+/* Seção de projeções */
+.projecao-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.projecao-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #2c3e50;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Cards de projeção - Mais compactos */
+.projecao-section > div {
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border-left: 3px solid;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.projecao-section > div:hover {
+    transform: translateX(2px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.projecao-section > div:first-child {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(0, 102, 204, 0.1));
+    border-left-color: #0066cc;
+}
+
+.projecao-section > div:nth-child(2) {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(220, 53, 69, 0.1));
+    border-left-color: #dc3545;
+}
+
+.projecao-section > div:nth-child(3) {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(40, 167, 69, 0.1));
+    border-left-color: #28a745;
+}
+
+.projecao-section > div:nth-child(3) {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(40, 167, 69, 0.1));
+    border-left-color: #28a745;
+}
+
+.projecao-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0066cc;
+}
+
+.projecao-falta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #721c24;
+}
+
+.ritmo-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #155724;
+}
+
+
+
+.projecao-sucesso {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #155724;
+}
+
+/* Seção de status dos clientes */
+.clientes-status-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.clientes-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #2c3e50;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Container do gráfico de pizza */
+.clientes-chart-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Canvas do gráfico */
+#statusClientesChart {
+    max-width: 120px;
+    max-height: 120px;
+    margin: 0;
+}
+
+/* Legenda do gráfico */
+.clientes-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem 0;
+    font-size: 0.75rem;
+}
+
+.legend-color {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legend-text {
+    flex: 1;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.legend-percent {
+    font-weight: 600;
+    color: #0066cc;
+    min-width: 30px;
+    text-align: right;
+}
+
+/* Estilo para erro do gráfico */
+.grafico-status-clientes-erro {
+    text-align: center;
+    padding: 1rem;
+    color: #6c757d;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.grafico-status-clientes-erro i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+    color: #dc3545;
+}
+
+.grafico-status-clientes-erro p {
+    margin: 0;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+/* ===== SOBRESCRITA FORÇADA PARA RESOLVER CONFLITOS ===== */
+.carteira-stats .meta-progress-container {
+    margin: 1rem 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+.carteira-stats .meta-progress-labels {
+    padding: 0 !important;
+    margin: 0 0 0.5rem 0 !important;
+    align-items: flex-end !important;
+    width: 100% !important;
+}
+
+.carteira-stats .meta-progress-text,
+.carteira-stats .meta-progress-target {
+    background: transparent !important;
+    padding: 0.25rem 0.5rem !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    margin: 0 !important;
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+}
+
+.carteira-stats .meta-progress-text:hover,
+.carteira-stats .meta-progress-target:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Regra específica para o valor da meta */
+.carteira-stats .meta-progress-target {
+    margin-right: 1rem !important;
+    padding-right: 1.5rem !important;
+}
+
+/* Regra específica para o valor do faturamento */
+.carteira-stats .meta-progress-text {
+    margin-left: 1rem !important;
+    padding-left: 1.5rem !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .meta-header {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .meta-carteira-card {
+        min-width: auto;
+    }
+    
+    .projecoes-clientes-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .clientes-chart-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #statusClientesChart {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+    .clientes-legend {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .legend-item {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .meta-carteira-value {
+        font-size: 1.1rem;
+    }
+    
+    .meta-carteira-label {
+        font-size: 0.75rem;
+    }
+    
+    .projecao-text,
+    .projecao-falta,
+    .ritmo-text,
+    .ritmo-necessario {
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== REGRAS FINAIS PARA GARANTIR ALINHAMENTO PERFEITO ===== */
+.carteira-stats .meta-progress-container {
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+.carteira-stats .meta-progress-labels {
+    padding: 0 !important;
+    margin-bottom: 0.5rem !important;
+    align-items: flex-end !important;
+    width: 100% !important;
+}
+
+.carteira-stats .meta-progress-target {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    text-align: right !important;
+}
+
+.carteira-stats .meta-progress-text {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+}
+
+/* Ajuste fino para alinhamento vertical */
+.carteira-stats .meta-progress-text,
+.carteira-stats .meta-progress-target {
+    display: inline-block !important;
+    vertical-align: bottom !important;
+}
+
+/* ========================================
+   CARD DA META PESSOAL DO SUPERVISOR
+   ======================================== */
+
+.supervisor-personal-card {
+    border: 2px solid var(--primary-color) !important;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-light) 100%) !important;
+    color: white !important;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3) !important;
+}
+
+.supervisor-personal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    animation: supervisor-shine 3s infinite;
+}
+
+@keyframes supervisor-shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.supervisor-personal-card h3 {
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.supervisor-personal-card p {
+    color: white !important;
+    opacity: 0.9;
+}
+
+.supervisor-personal-card .meta-progress-bar {
+    background: rgba(255,255,255,0.3) !important;
+}
+
+.supervisor-personal-card .meta-progress-fill {
+    background: white !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.supervisor-personal-card .meta-progress-labels {
+    color: white !important;
+}
+
+.supervisor-personal-card .meta-progress-text,
+.supervisor-personal-card .meta-progress-target {
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.supervisor-personal-card .meta-info {
+    color: white !important;
+}
+
+.supervisor-personal-card .meta-label {
+    color: white !important;
+    opacity: 0.9;
+}
+
+.supervisor-personal-card .meta-percentual {
+    color: white !important;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.supervisor-personal-card .meta-status span {
+    background: rgba(255,255,255,0.2) !important;
+    color: white !important;
+    border: 1px solid white !important;
+    backdrop-filter: blur(5px);
+}
+
+.supervisor-personal-card .vendedor-info {
+    border-top: 1px solid rgba(255,255,255,0.3) !important;
+}
+
+.supervisor-personal-card .vendedor-info > div:first-child {
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.supervisor-personal-card .vendedor-info > div:last-child {
+    color: rgba(255,255,255,0.8) !important;
+}
+
+/* Hover effect para o card do supervisor */
+.supervisor-personal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4) !important;
+}
+
+/* Responsividade para o card do supervisor */
+@media (max-width: 768px) {
+    .supervisor-personal-card {
+        margin-bottom: 1rem;
+    }
+    
+    .supervisor-personal-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .supervisor-personal-card .meta-progress-labels {
+        font-size: 0.75rem;
+    }
+}
+

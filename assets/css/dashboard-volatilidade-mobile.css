@@ -1,0 +1,430 @@
+/* ===== DASHBOARD VOLATILIDADE - MOBILE RESPONSIVE ===== */
+
+/* Variáveis para mobile */
+:root {
+    --mobile-padding: 0.75rem;
+    --mobile-gap: 0.5rem;
+    --mobile-font-size: 0.875rem;
+    --mobile-border-radius: 8px;
+    --mobile-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Container principal */
+.dashboard-container {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.dashboard-main {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Seção de boas-vindas mobile */
+.welcome-section {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.welcome-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+/* Ocultar gráficos em mobile */
+@media (max-width: 768px) {
+    .chart-container {
+        display: none !important;
+    }
+    
+    .chart-canvas-container {
+        display: none !important;
+    }
+    
+    canvas {
+        display: none !important;
+    }
+    
+    /* Mostrar indicadores mobile */
+    .mobile-chart-indicator {
+        display: block !important;
+        margin-top: 1rem;
+    }
+    
+    .mobile-chart-indicator .alert {
+        border-radius: var(--mobile-border-radius);
+        font-size: 0.8rem;
+        padding: 0.75rem;
+        margin-bottom: 0;
+    }
+    
+    .mobile-chart-indicator .alert strong {
+        font-size: 0.85rem;
+    }
+    
+    .mobile-chart-indicator .alert small {
+        font-size: 0.75rem;
+    }
+}
+
+/* KPIs responsivos */
+.kpi-section {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Cards de métricas mobile */
+@media (max-width: 768px) {
+    .metric-card-compact {
+        margin-bottom: 0.75rem;
+        border-radius: var(--mobile-border-radius);
+        box-shadow: var(--mobile-shadow);
+    }
+    
+    .metric-card-compact .card-body {
+        padding: 0.75rem;
+    }
+    
+    .metric-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .metric-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin: 0;
+        color: #666;
+    }
+    
+    .metric-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+    }
+    
+    .metric-icon.whatsapp {
+        background: rgba(37, 211, 102, 0.1);
+        color: #25D366;
+    }
+    
+    .metric-icon.presencial {
+        background: rgba(255, 107, 107, 0.1);
+        color: #FF6B6B;
+    }
+    
+    .metric-icon.ligacao {
+        background: rgba(78, 205, 196, 0.1);
+        color: #4ECDC4;
+    }
+    
+    .metric-icon.email {
+        background: rgba(156, 39, 176, 0.1);
+        color: #9C27B0;
+    }
+    
+    .metric-icon.clientes {
+        background: rgba(40, 167, 69, 0.1);
+        color: #28a745;
+    }
+    
+    .metric-icon.ativos {
+        background: rgba(40, 167, 69, 0.1);
+        color: #28a745;
+    }
+    
+    .metric-icon.inativos {
+        background: rgba(220, 53, 69, 0.1);
+        color: #dc3545;
+    }
+    
+    .metric-icon.inativando {
+        background: rgba(255, 193, 7, 0.1);
+        color: #ffc107;
+    }
+    
+    .metric-value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 0.25rem;
+    }
+    
+    .metric-change {
+        font-size: 0.75rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+    
+    .metric-change.positive {
+        color: #28a745;
+    }
+    
+    .metric-change.negative {
+        color: #dc3545;
+    }
+    
+    .metric-change.neutral {
+        color: #6c757d;
+    }
+    
+    .metric-change i {
+        font-size: 0.7rem;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .welcome-section h2 {
+        font-size: 1.1rem;
+    }
+    
+    .welcome-section p {
+        font-size: 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 1rem;
+    }
+    
+    .metric-card-compact .card-body {
+        padding: 0.6rem;
+    }
+    
+    .metric-label {
+        font-size: 0.75rem;
+    }
+    
+    .metric-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    
+    .metric-value {
+        font-size: 1.3rem;
+    }
+    
+    .metric-change {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .welcome-section h2 {
+        font-size: 1rem;
+    }
+    
+    .welcome-section p {
+        font-size: 0.75rem;
+    }
+    
+    .section-title {
+        font-size: 0.9rem;
+    }
+    
+    .metric-card-compact .card-body {
+        padding: 0.5rem;
+    }
+    
+    .metric-label {
+        font-size: 0.7rem;
+    }
+    
+    .metric-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+    }
+    
+    .metric-value {
+        font-size: 1.2rem;
+    }
+    
+    .metric-change {
+        font-size: 0.65rem;
+    }
+}
+
+/* Botão de coleta de métricas mobile */
+@media (max-width: 768px) {
+    #btnColetarMetricas {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    #btnColetarMetricas span {
+        display: none;
+    }
+    
+    #btnColetarMetricas i {
+        margin-right: 0;
+    }
+}
+
+/* Alertas mobile */
+@media (max-width: 768px) {
+    .alert-item {
+        margin-bottom: 0.75rem;
+        padding: 0.75rem;
+        border-radius: var(--mobile-border-radius);
+        font-size: 0.8rem;
+    }
+    
+    .alert-item strong {
+        font-size: 0.85rem;
+    }
+    
+    .alert-item small {
+        font-size: 0.7rem;
+    }
+}
+
+/* Detalhes dos vendedores mobile */
+@media (max-width: 768px) {
+    .collapse .card {
+        margin-top: 0.5rem;
+        border-radius: var(--mobile-border-radius);
+    }
+    
+    .collapse .card-header {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .collapse .card-body {
+        padding: 0.5rem;
+    }
+    
+    .collapse .table {
+        font-size: 0.75rem;
+    }
+    
+    .collapse .table td {
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .collapse .badge {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.4rem;
+    }
+    
+    .btn-sm {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    /* Botões de detalhes dos vendedores mobile */
+    .btn-outline-success,
+    .btn-outline-primary,
+    .btn-outline-secondary {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: var(--mobile-border-radius);
+    }
+    
+    .btn-outline-success i,
+    .btn-outline-primary i,
+    .btn-outline-secondary i {
+        font-size: 0.65rem;
+        margin-right: 0.25rem;
+    }
+}
+
+/* Modo escuro mobile */
+[data-theme="dark"] .metric-card-compact {
+    background: #2d3748;
+    border-color: #4a5568;
+}
+
+[data-theme="dark"] .metric-label {
+    color: #a0aec0;
+}
+
+[data-theme="dark"] .metric-value {
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .metric-change.positive {
+    color: #68d391;
+}
+
+[data-theme="dark"] .metric-change.negative {
+    color: #fc8181;
+}
+
+[data-theme="dark"] .metric-change.neutral {
+    color: #a0aec0;
+}
+
+[data-theme="dark"] .section-title {
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .welcome-section h2 {
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .welcome-section p {
+    color: #a0aec0;
+}
+
+[data-theme="dark"] .alert-item {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .collapse .card {
+    background: #2d3748;
+    border-color: #4a5568;
+}
+
+[data-theme="dark"] .collapse .card-header {
+    background: #4a5568;
+    border-color: #4a5568;
+}
+
+[data-theme="dark"] .collapse .table {
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .collapse .table td {
+    border-color: #4a5568;
+}
+
+[data-theme="dark"] .mobile-chart-indicator .alert {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .mobile-chart-indicator .alert strong {
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .mobile-chart-indicator .alert small {
+    color: #a0aec0;
+}

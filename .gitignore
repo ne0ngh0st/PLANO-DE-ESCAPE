@@ -1,0 +1,59 @@
+# Planilhas Excel (dados sensíveis, locais de cada dev)
+.XLSX/*
+!.XLSX/.gitkeep
+!.XLSX/README.md
+*.xlsx
+*.xls
+*.xlsm
+
+# Arquivos SQL gerados
+.SQL/
+
+# Logs
+logs/*.txt
+!logs/.gitkeep
+
+# Uploads
+uploads/**/*
+!uploads/**/.gitkeep
+
+# Cache e temporários
+*.cache
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Node modules (se houver)
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+env/
+
+# Configurações locais sensíveis
+includes/config/local_config.php
+.env
+.env.local
+
+# Backups
+*.backup
+*.bak
+*.old
+*_backup.*
+

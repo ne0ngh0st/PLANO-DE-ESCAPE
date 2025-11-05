@@ -1,0 +1,508 @@
+/* ========================================
+   IMPORTAR BASES - CSS
+   ======================================== */
+
+/* Container Principal */
+.dashboard-main {
+    padding: 2rem 3rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 3rem !important;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.main-content {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Responsividade do padding */
+@media (max-width: 768px) {
+    .dashboard-main {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-main {
+        padding: 1rem !important;
+    }
+}
+
+/* Cards de Planilhas */
+.planilha-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.planilha-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+    border-color: #0d6efd;
+}
+
+.planilha-card.processing {
+    border-color: #ffc107;
+    background-color: #fffbf0;
+}
+
+.planilha-card.success {
+    border-color: #198754;
+    background-color: #f0f9f4;
+}
+
+.planilha-card.error {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+/* Ícone da Planilha */
+.planilha-icone {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+/* Badge de Status */
+.status-badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+}
+
+.status-badge.badge-aguardando {
+    background-color: #6c757d !important;
+}
+
+.status-badge.badge-processando {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+.status-badge.badge-sucesso {
+    background-color: #198754 !important;
+}
+
+.status-badge.badge-erro {
+    background-color: #dc3545 !important;
+}
+
+/* Botões de Importar */
+.btn-importar {
+    transition: all 0.3s ease;
+}
+
+.btn-importar:hover {
+    transform: scale(1.05);
+}
+
+.btn-importar:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Console de Logs */
+.console-log {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    padding: 1rem;
+    height: 400px;
+    overflow-y: auto;
+    border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.console-log::-webkit-scrollbar {
+    width: 8px;
+}
+
+.console-log::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.console-log::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.console-log::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Linhas do Console */
+.console-log p {
+    margin: 0;
+    padding: 2px 0;
+    line-height: 1.5;
+}
+
+.log-info {
+    color: #4fc3f7;
+}
+
+.log-success {
+    color: #81c784;
+}
+
+.log-error {
+    color: #e57373;
+}
+
+.log-warning {
+    color: #ffb74d;
+}
+
+.log-progress {
+    color: #ba68c8;
+}
+
+/* Ícones de Log */
+.log-icon {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+/* Cards de Informação */
+.card {
+    border-radius: 8px;
+    border: none;
+}
+
+.card-header {
+    border-radius: 8px 8px 0 0 !important;
+}
+
+/* Progress Bar */
+.progress {
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+/* Alertas */
+#alertContainer .alert {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões de Ação Superior */
+.btn-toolbar .btn {
+    transition: all 0.3s ease;
+}
+
+.btn-toolbar .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animações */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.processing .planilha-icone {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Loading Spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .btn-toolbar {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-toolbar .btn {
+        width: 100%;
+        margin: 0.25rem 0 !important;
+    }
+    
+    .planilha-card {
+        margin-bottom: 1rem;
+    }
+    
+    .console-log {
+        height: 300px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Código em Alerts */
+code {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* Listas em Cards */
+.card-body ul {
+    padding-left: 1.5rem;
+}
+
+.card-body ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Títulos */
+h1.h2 {
+    font-weight: 600;
+    color: #333;
+}
+
+.card-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+/* Texto Muted */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Border Bottom */
+.border-bottom {
+    border-bottom: 2px solid #dee2e6 !important;
+}
+
+/* Shadow */
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transition: box-shadow 0.3s ease;
+}
+
+/* Espaçamento de Ícones */
+.fas, .far, .fab {
+    vertical-align: middle;
+}
+
+/* Estado de Loading Geral */
+.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Overflow de Texto Longo */
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Botão Limpar Logs */
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   GERENCIADOR DE ARQUIVOS
+   ======================================== */
+
+/* Drop Zone */
+#dropZone {
+    transition: all 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#dropZone:hover {
+    background-color: #e7f3ff !important;
+    border-color: #0056b3 !important;
+    transform: scale(1.01);
+}
+
+#dropZone.dragging {
+    background-color: #d1ecf1 !important;
+    border-color: #0c5460 !important;
+    transform: scale(1.02);
+}
+
+/* Lista de Arquivos */
+#listaArquivos .list-group-item,
+#uploadList .list-group-item {
+    transition: all 0.2s ease;
+}
+
+#listaArquivos .list-group-item:hover,
+#uploadList .list-group-item:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Tabs Customizados */
+.nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.nav-tabs .nav-link {
+    color: #6c757d;
+    border: none;
+    padding: 0.75rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #0d6efd;
+    background-color: #f8f9fa;
+}
+
+.nav-tabs .nav-link.active {
+    color: #0d6efd;
+    font-weight: 600;
+    border-bottom: 3px solid #0d6efd;
+    background-color: transparent;
+}
+
+/* Upload Queue */
+#uploadQueue {
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* File Icons */
+.fa-file-excel {
+    color: #217346 !important;
+}
+
+.fa-file {
+    color: #5c6bc0 !important;
+}
+
+/* Card Border Primary */
+.border-primary {
+    border-color: #0d6efd !important;
+    border-width: 2px !important;
+}
+
+/* Botão Atualizar com Spin */
+.fa-spin {
+    animation: fa-spin 1s infinite linear;
+}
+
+@keyframes fa-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Resultado Teste Pasta */
+#resultadoTestePasta {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Input de Pasta */
+#inputPastaCustomizada {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+/* Badges de Info */
+.badge {
+    font-weight: 500;
+}
+
+/* Botões em Linha */
+.d-flex.gap-2 {
+    gap: 0.5rem;
+}
+
+/* Código inline */
+code {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #d63384;
+}
+
+/* Texto Pequeno */
+small.text-muted {
+    font-size: 0.875em;
+}
+
+/* Responsividade do Gerenciador */
+@media (max-width: 768px) {
+    #dropZone {
+        padding: 2rem 1rem !important;
+        min-height: 150px;
+    }
+    
+    #dropZone h5 {
+        font-size: 1rem;
+    }
+    
+    #dropZone .fa-3x {
+        font-size: 2rem !important;
+    }
+    
+    .nav-tabs .nav-link {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .d-flex.gap-2 {
+        flex-direction: column;
+    }
+    
+    .d-flex.gap-2 .btn {
+        width: 100%;
+    }
+}
+
+/* Scroll Suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Transições Gerais */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+

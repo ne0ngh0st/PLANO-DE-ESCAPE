@@ -1,0 +1,301 @@
+/* Estilos específicos para leads manuais */
+
+.leads-manuais-container {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.leads-manuais-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.leads-manuais-header h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.leads-manuais-header p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.leads-manuais-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.leads-manuais-stats .stat-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 150px;
+}
+
+.leads-manuais-stats .stat-card h4 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.leads-manuais-stats .stat-card p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.leads-manuais-table {
+    margin-top: 1rem;
+}
+
+.leads-manuais-table th {
+    background: var(--light-bg);
+    color: var(--dark-color);
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color);
+    padding: 1rem 0.75rem;
+}
+
+.leads-manuais-table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.leads-manuais-table tr:hover {
+    background: var(--light-bg);
+}
+
+.valor-estimado {
+    font-weight: 600;
+    color: var(--success-color);
+}
+
+.data-cadastro {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.leads-manuais-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.leads-manuais-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.leads-manuais-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para o modal de edição */
+#modalEditarLeadManual .modal-dialog {
+    max-width: 800px;
+}
+
+#modalEditarLeadManual .form-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+#modalEditarLeadManual .form-control {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+}
+
+#modalEditarLeadManual .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+}
+
+#modalEditarLeadManual .text-danger {
+    color: var(--danger-color) !important;
+}
+
+/* Responsividade para leads manuais */
+@media (max-width: 768px) {
+    .leads-manuais-container {
+        padding: 1rem;
+    }
+    
+    .leads-manuais-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .leads-manuais-stats .stat-card {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .leads-manuais-table {
+        font-size: 0.9rem;
+    }
+    
+    .leads-manuais-table th,
+    .leads-manuais-table td {
+        padding: 0.5rem 0.25rem;
+    }
+    
+    #modalEditarLeadManual .modal-dialog {
+        margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+    }
+}
+
+/* Estilos para as abas */
+.nav-tabs {
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.nav-tabs .nav-link {
+    color: var(--text-muted);
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    background: none;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    background: none;
+}
+
+.nav-tabs .nav-link i {
+    margin-right: 0.5rem;
+}
+
+/* Indicador de aba ativa */
+.tab-content {
+    min-height: 400px;
+}
+
+/* Estilos para mensagens de sucesso/erro */
+.mensagem {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.mensagem.sucesso {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.mensagem.erro {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Melhorias para o formulário de cadastro */
+.cadastro-container {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cadastro-container h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+}
+
+.required {
+    color: var(--danger-color);
+    font-weight: bold;
+}
+
+.btn-cadastrar {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    min-width: 200px;
+}
+
+.btn-cadastrar:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-cadastrar i {
+    margin-right: 0.5rem;
+}

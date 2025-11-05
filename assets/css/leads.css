@@ -1,0 +1,1811 @@
+/* ===== ESTILOS ESPECÍFICOS PARA LEADS ===== */
+
+:root {
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --border-color: #dee2e6;
+    --text-color: #495057;
+    --dark-color: #212529;
+    --border-radius: 12px;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== SELETOR DE VISÃO - MODO ESCURO ===== */
+[data-theme="dark"] .visao-selector-container {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffb74d !important;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .visao-selector-container label {
+    color: #ffb74d !important;
+}
+
+[data-theme="dark"] .visao-selector-container select {
+    background: rgba(255, 152, 0, 0.1) !important;
+    color: #ffb74d !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .visao-selector-container select:focus {
+    border-color: #ff8f00 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25) !important;
+}
+
+/* ===== BADGE CNPJ ===== */
+.lead-nome-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cnpj-badge {
+    display: inline-block;
+    margin-left: 0;
+}
+
+.cnpj-badge .badge {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.35rem;
+    border-radius: 3px;
+    font-weight: 400;
+    line-height: 1.1;
+    white-space: nowrap;
+    background-color: #f8f9fa !important;
+    color: #6c757d;
+    border: 1px solid #dee2e6;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.leads-container {
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+/* ===== MODO ESCURO - LEADS ===== */
+[data-theme="dark"] .leads-container {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3) !important;
+}
+
+/* Filtros */
+[data-theme="dark"] .filtros-container {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .filtros-container label {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .filtros-container input,
+[data-theme="dark"] .filtros-container select {
+    background: rgba(255, 152, 0, 0.1) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .filtros-container input:focus,
+[data-theme="dark"] .filtros-container select:focus {
+    border-color: #ff8f00 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25) !important;
+}
+
+[data-theme="dark"] .filtros-container input::placeholder {
+    color: #ffcc80 !important;
+    opacity: 0.8 !important;
+}
+
+/* Tabela de leads */
+[data-theme="dark"] .leads-table {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .leads-table thead th {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .leads-table tbody tr {
+    border-bottom: 1px solid rgba(255, 152, 0, 0.2) !important;
+}
+
+[data-theme="dark"] .leads-table tbody tr:hover {
+    background: rgba(255, 152, 0, 0.05) !important;
+}
+
+[data-theme="dark"] .leads-table tbody td {
+    color: #ffffff !important;
+}
+
+/* Cards mobile */
+[data-theme="dark"] .lead-card {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .lead-card-header h4 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .lead-card-info .lead-info-label {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .lead-card-info .lead-info-value {
+    color: #ffffff !important;
+}
+
+/* Tabs */
+[data-theme="dark"] .nav-tabs .nav-link {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffb74d !important;
+}
+
+[data-theme="dark"] .nav-tabs .nav-link.active {
+    background: #ff8f00 !important;
+    border-color: #ff8f00 !important;
+    color: white !important;
+}
+
+[data-theme="dark"] .nav-tabs .nav-link:hover {
+    background: rgba(255, 152, 0, 0.2) !important;
+    border-color: #ff8f00 !important;
+    color: #ffb74d !important;
+}
+
+/* Estatísticas */
+[data-theme="dark"] .stat-card {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffb74d !important;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .stat-card h3,
+[data-theme="dark"] .stat-card h4 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .stat-card p {
+    color: #ffcc80 !important;
+}
+
+/* Paginação */
+[data-theme="dark"] .paginacao-container {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffb74d !important;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .paginacao-container .btn {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .paginacao-container .btn:hover {
+    background: rgba(255, 152, 0, 0.2) !important;
+    border-color: #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .paginacao-container .btn-primary {
+    background: #ff8f00 !important;
+    border-color: #ff8f00 !important;
+    color: white !important;
+}
+
+/* Informações de filtros */
+[data-theme="dark"] .filtros-info {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+}
+
+/* Leads manuais */
+[data-theme="dark"] .leads-manuais-container {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .leads-manuais-header h3 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .leads-manuais-header p {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .leads-manuais-table {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .leads-manuais-table thead th {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .leads-manuais-table tbody tr {
+    border-bottom: 1px solid rgba(255, 152, 0, 0.2) !important;
+}
+
+[data-theme="dark"] .leads-manuais-table tbody tr:hover {
+    background: rgba(255, 152, 0, 0.05) !important;
+}
+
+[data-theme="dark"] .leads-manuais-table tbody td {
+    color: #ffffff !important;
+}
+
+/* Elementos gerais */
+[data-theme="dark"] .welcome-section h2 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .welcome-section p {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .no-leads {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .no-leads h3 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .no-leads p {
+    color: #ffcc80 !important;
+}
+
+/* Badges */
+[data-theme="dark"] .uf-badge {
+    background: #ff8f00 !important;
+    color: white !important;
+}
+
+[data-theme="dark"] .status-badge {
+    background: #ff9800 !important;
+    color: white !important;
+}
+
+[data-theme="dark"] .cnpj-badge .badge {
+    background: rgba(255, 152, 0, 0.2) !important;
+    color: #ffb74d !important;
+    border: 1px solid rgba(255, 152, 0, 0.4) !important;
+}
+
+/* Botões */
+[data-theme="dark"] .btn-primary {
+    background: #ff8f00 !important;
+    border-color: #ff8f00 !important;
+    color: white !important;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background: #ff9800 !important;
+    border-color: #ff9800 !important;
+}
+
+[data-theme="dark"] .btn-secondary {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border-color: rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: rgba(255, 152, 0, 0.2) !important;
+    border-color: #ff8f00 !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn-success {
+    background: #4caf50 !important;
+    border-color: #4caf50 !important;
+    color: white !important;
+}
+
+[data-theme="dark"] .btn-warning {
+    background: #ff9800 !important;
+    border-color: #ff9800 !important;
+    color: white !important;
+}
+
+[data-theme="dark"] .btn-danger {
+    background: #f44336 !important;
+    border-color: #f44336 !important;
+    color: white !important;
+}
+
+/* Textos secundários */
+[data-theme="dark"] .text-muted {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .text-secondary {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] .text-light {
+    color: #ffcc80 !important;
+}
+
+[data-theme="dark"] small,
+[data-theme="dark"] .small {
+    color: #ffcc80 !important;
+}
+
+/* Placeholders */
+[data-theme="dark"] ::placeholder {
+    color: #ffcc80 !important;
+    opacity: 0.7 !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+    color: #ffcc80 !important;
+    opacity: 0.8 !important;
+}
+
+/* Cards de vendedor responsável */
+[data-theme="dark"] .vendor-meta {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    margin: 4px 0 !important;
+}
+
+[data-theme="dark"] .vendor-meta .vendor-name {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+}
+
+[data-theme="dark"] .vendor-meta .vendor-code {
+    color: #ffcc80 !important;
+    font-size: 11px !important;
+    margin-top: 2px !important;
+}
+
+/* Ajustar filtros específicos */
+[data-theme="dark"] .filtros-form {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .filtros-content {
+    background: transparent !important;
+}
+
+[data-theme="dark"] .filtros-grid {
+    background: transparent !important;
+}
+
+[data-theme="dark"] .filtro-grupo {
+    background: transparent !important;
+}
+
+[data-theme="dark"] .filtro-grupo label {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+}
+
+[data-theme="dark"] .filtro-grupo input,
+[data-theme="dark"] .filtro-grupo select {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+    padding: 10px 12px !important;
+}
+
+[data-theme="dark"] .filtro-grupo input:focus,
+[data-theme="dark"] .filtro-grupo select:focus {
+    border-color: #ff8f00 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25) !important;
+    background: rgba(255, 152, 0, 0.15) !important;
+}
+
+[data-theme="dark"] .filtro-grupo input::placeholder {
+    color: #ffcc80 !important;
+    opacity: 0.8 !important;
+}
+
+/* Botões de filtro */
+[data-theme="dark"] .filtros-acoes {
+    background: transparent !important;
+    margin-top: 20px !important;
+}
+
+[data-theme="dark"] .filtros-acoes .btn-primary {
+    background: #ff8f00 !important;
+    border-color: #ff8f00 !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+}
+
+[data-theme="dark"] .filtros-acoes .btn-primary:hover {
+    background: #ff9800 !important;
+    border-color: #ff9800 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(255, 152, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .filtros-acoes .btn-limpar-filtros {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    margin-left: 10px !important;
+}
+
+[data-theme="dark"] .filtros-acoes .btn-limpar-filtros:hover {
+    background: rgba(255, 152, 0, 0.2) !important;
+    border-color: #ff8f00 !important;
+    color: #ffffff !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Estatísticas dos filtros */
+[data-theme="dark"] .filtros-stats {
+    background: transparent !important;
+}
+
+[data-theme="dark"] .filtros-stats .stat-card {
+    background: linear-gradient(135deg, #2d1b00 0%, #3e2723 100%) !important;
+    border: 1px solid #ff8f00 !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3) !important;
+    text-align: center !important;
+}
+
+[data-theme="dark"] .filtros-stats .stat-card h3 {
+    color: #ffffff !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+    margin-bottom: 8px !important;
+}
+
+[data-theme="dark"] .filtros-stats .stat-card p {
+    color: #ffcc80 !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+}
+
+[data-theme="dark"] .filtros-stats .stat-card i {
+    color: #ff8f00 !important;
+    margin-right: 8px !important;
+}
+
+/* Elementos específicos que podem estar faltando */
+[data-theme="dark"] .leads-table .vendor-meta,
+[data-theme="dark"] .lead-card .vendor-meta {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    margin: 4px 0 !important;
+}
+
+[data-theme="dark"] .leads-table .vendor-meta .vendor-name,
+[data-theme="dark"] .lead-card .vendor-meta .vendor-name {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+}
+
+[data-theme="dark"] .leads-table .vendor-meta .vendor-code,
+[data-theme="dark"] .lead-card .vendor-meta .vendor-code {
+    color: #ffcc80 !important;
+    font-size: 11px !important;
+    margin-top: 2px !important;
+}
+
+/* Ajustar elementos de filtro que podem estar com estilos inline */
+[data-theme="dark"] .filtros-container .filtros-form .filtros-content .filtros-grid .filtro-grupo input,
+[data-theme="dark"] .filtros-container .filtros-form .filtros-content .filtros-grid .filtro-grupo select {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+    padding: 10px 12px !important;
+}
+
+[data-theme="dark"] .filtros-container .filtros-form .filtros-content .filtros-grid .filtro-grupo input:focus,
+[data-theme="dark"] .filtros-container .filtros-form .filtros-content .filtros-grid .filtro-grupo select:focus {
+    border-color: #ff8f00 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25) !important;
+    background: rgba(255, 152, 0, 0.15) !important;
+}
+
+[data-theme="dark"] .filtros-container .filtros-form .filtros-content .filtros-grid .filtro-grupo input::placeholder {
+    color: #ffcc80 !important;
+    opacity: 0.8 !important;
+}
+
+/* Forçar estilos em elementos que podem ter estilos inline */
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="number"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] select {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border: 1px solid rgba(255, 152, 0, 0.3) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] input[type="text"]:focus,
+[data-theme="dark"] input[type="number"]:focus,
+[data-theme="dark"] input[type="email"]:focus,
+[data-theme="dark"] select:focus {
+    border-color: #ff8f00 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25) !important;
+    background: rgba(255, 152, 0, 0.15) !important;
+}
+
+[data-theme="dark"] input[type="text"]::placeholder,
+[data-theme="dark"] input[type="number"]::placeholder,
+[data-theme="dark"] input[type="email"]::placeholder {
+    color: #ffcc80 !important;
+    opacity: 0.8 !important;
+}
+
+/* Células específicas de nome */
+[data-theme="dark"] .leads-table tbody td:first-child,
+[data-theme="dark"] .leads-table tbody td[data-label="Nome"],
+[data-theme="dark"] .leads-table tbody td[data-label="Razão Social"],
+[data-theme="dark"] .leads-table tbody td[data-label="Nome do Lead"] {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Nomes de empresas/clientes */
+[data-theme="dark"] .leads-table tbody td .company-name,
+[data-theme="dark"] .leads-table tbody td .lead-name,
+[data-theme="dark"] .leads-table tbody td .client-name {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Forçar cor branca em todas as células de texto */
+[data-theme="dark"] .leads-table tbody td {
+    color: #ffffff !important;
+}
+
+/* Badges de CNPJ */
+[data-theme="dark"] .cnpj-badge .badge {
+    background: rgba(255, 152, 0, 0.2) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 152, 0, 0.4) !important;
+    font-weight: 600 !important;
+}
+
+/* Forçar cor branca em elementos específicos que podem estar com estilos inline */
+[data-theme="dark"] .leads-table tbody td * {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .leads-table tbody td .cnpj-badge .badge {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Estilos mais específicos para garantir visibilidade */
+[data-theme="dark"] .leads-table tbody tr td:first-child,
+[data-theme="dark"] .leads-table tbody tr td:nth-child(1) {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Forçar cor branca em todos os elementos de texto dentro das células */
+[data-theme="dark"] .leads-table tbody td,
+[data-theme="dark"] .leads-table tbody td span,
+[data-theme="dark"] .leads-table tbody td div,
+[data-theme="dark"] .leads-table tbody td p,
+[data-theme="dark"] .leads-table tbody td a {
+    color: #ffffff !important;
+}
+
+/* Específico para nomes de empresas */
+[data-theme="dark"] .leads-table tbody td:first-child,
+[data-theme="dark"] .leads-table tbody td:first-child * {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Badges e elementos especiais */
+[data-theme="dark"] .leads-table tbody td .badge,
+[data-theme="dark"] .leads-table tbody td .cnpj-badge,
+[data-theme="dark"] .leads-table tbody td .cnpj-badge * {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Forçar cor branca em elementos que podem ter estilos inline específicos */
+[data-theme="dark"] .leads-table tbody td[style*="color"] {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .leads-table tbody td *[style*="color"] {
+    color: #ffffff !important;
+}
+
+/* Estilos para elementos que podem estar sendo renderizados dinamicamente */
+[data-theme="dark"] .leads-table tbody td:first-child,
+[data-theme="dark"] .leads-table tbody td:first-child span,
+[data-theme="dark"] .leads-table tbody td:first-child div,
+[data-theme="dark"] .leads-table tbody td:first-child p {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Forçar cor branca em todos os elementos de texto */
+[data-theme="dark"] .leads-table tbody td:first-child * {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Estilos para elementos que podem ter classes específicas */
+[data-theme="dark"] .leads-table tbody td .text-dark,
+[data-theme="dark"] .leads-table tbody td .text-muted,
+[data-theme="dark"] .leads-table tbody td .text-secondary {
+    color: #ffffff !important;
+}
+
+/* Forçar cor branca em elementos que podem ter estilos inline específicos */
+[data-theme="dark"] .leads-table tbody td:first-child[style*="color"] {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .leads-table tbody td:first-child *[style*="color"] {
+    color: #ffffff !important;
+}
+
+/* Estilos para elementos que podem estar sendo renderizados com JavaScript */
+[data-theme="dark"] .leads-table tbody td:first-child .company-name,
+[data-theme="dark"] .leads-table tbody td:first-child .lead-name,
+[data-theme="dark"] .leads-table tbody td:first-child .client-name,
+[data-theme="dark"] .leads-table tbody td:first-child .nome-empresa,
+[data-theme="dark"] .leads-table tbody td:first-child .razao-social {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Estilos para elementos que podem estar sendo renderizados com classes específicas */
+[data-theme="dark"] .leads-table tbody td:first-child .text-dark,
+[data-theme="dark"] .leads-table tbody td:first-child .text-muted,
+[data-theme="dark"] .leads-table tbody td:first-child .text-secondary,
+[data-theme="dark"] .leads-table tbody td:first-child .text-light {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Forçar cor branca em elementos que podem ter estilos inline específicos */
+[data-theme="dark"] .leads-table tbody td:first-child[style*="color"] {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .leads-table tbody td:first-child *[style*="color"] {
+    color: #ffffff !important;
+}
+
+/* Estilos para elementos que podem estar sendo renderizados com JavaScript */
+[data-theme="dark"] .leads-table tbody td:first-child .company-name,
+[data-theme="dark"] .leads-table tbody td:first-child .lead-name,
+[data-theme="dark"] .leads-table tbody td:first-child .client-name,
+[data-theme="dark"] .leads-table tbody td:first-child .nome-empresa,
+[data-theme="dark"] .leads-table tbody td:first-child .razao-social {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Estilos para elementos que podem estar sendo renderizados com classes específicas */
+[data-theme="dark"] .leads-table tbody td:first-child .text-dark,
+[data-theme="dark"] .leads-table tbody td:first-child .text-muted,
+[data-theme="dark"] .leads-table tbody td:first-child .text-secondary,
+[data-theme="dark"] .leads-table tbody td:first-child .text-light {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Forçar cor branca em elementos que podem ter estilos inline específicos */
+[data-theme="dark"] .leads-table tbody td:first-child[style*="color"] {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .leads-table tbody td:first-child *[style*="color"] {
+    color: #ffffff !important;
+}
+
+
+
+.stat-card {
+    background: var(--white);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    min-width: 180px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.stat-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ===== FILTROS ===== */
+.filtros-container {
+    margin-bottom: 2rem;
+}
+
+.filtros-form {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.filtros-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.filtros-form-left {
+    flex: 1;
+}
+
+.filtros-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+}
+
+.filtros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filtro-grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.filtro-grupo label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.filtro-grupo select,
+.filtro-grupo input {
+    padding: 0.7rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.filtros-acoes {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filtros-info {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #007bff;
+}
+
+/* ===== TABELA ===== */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    background: var(--white);
+    margin-bottom: 1rem;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: var(--light-gray);
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+.leads-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    table-layout: auto !important;
+    min-width: 1000px;
+    border: 1px solid var(--border-color);
+    font-size: 0.85rem;
+}
+
+.leads-table th {
+    background: #1a1a1a;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--white);
+    border-bottom: 2px solid var(--border-color);
+    border-right: 1px solid rgba(255,255,255,0.15);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Definir larguras específicas para cada coluna - otimizada para melhor uso do espaço */
+.leads-table th:nth-child(1) { /* Nome */
+    width: 19%;
+    min-width: 170px;
+}
+
+.leads-table th:nth-child(2) { /* Email */
+    width: 19%;
+    min-width: 170px;
+}
+
+.leads-table th:nth-child(3) { /* Telefone */
+    width: 11%;
+    min-width: 110px;
+}
+
+.leads-table th:nth-child(4) { /* Endereço */
+    width: 21%;
+    min-width: 190px;
+}
+
+.leads-table th:nth-child(5) { /* UF */
+    width: 6%;
+    min-width: 50px;
+}
+
+.leads-table th:nth-child(6) { /* Vendedor Responsável */
+    width: 12%;
+    min-width: 110px;
+}
+
+.leads-table th:nth-child(7) { /* Status */
+    width: 6%;
+    min-width: 60px;
+}
+
+.leads-table th:nth-child(8) { /* Ações */
+    width: 8%;
+    min-width: 90px;
+    text-align: center !important;
+    border-right: none;
+}
+
+.leads-table td {
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+    font-size: 0.85rem;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    max-width: none !important;
+    color: var(--text-color);
+    line-height: 1.4;
+    text-align: center;
+    height: auto !important;
+    min-height: auto !important;
+}
+
+/* Ajustar espaçamento específico para cada coluna */
+.leads-table td:nth-child(1) { /* Nome */
+    padding-left: 0.75rem;
+    padding-right: 0.5rem;
+    text-align: left;
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.leads-table td:nth-child(2) { /* Email */
+    text-align: left;
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.leads-table td:nth-child(3) { /* Telefone */
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.leads-table td:nth-child(4) { /* Endereço */
+    text-align: left;
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.leads-table td:nth-child(5) { /* UF */
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.leads-table td:nth-child(6) { /* Vendedor Responsável */
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.leads-table td:nth-child(7) { /* Status */
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.leads-table td:nth-child(8) { /* Ações */
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    vertical-align: middle;
+}
+
+.leads-table tr:hover {
+    background: var(--light-gray);
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-sm {
+    padding: 4px 6px;
+    font-size: 11px;
+    min-width: 22px;
+    height: 22px;
+    line-height: 1;
+}
+
+/* EXCEÇÃO: Botões do modal de observações - Mais discretos e naturais */
+#modalObservacoes .observacoes-acoes .btn,
+#modalObservacoes .observacoes-acoes button,
+.modal-observacoes .observacoes-acoes .btn,
+.modal-observacoes .observacoes-acoes button {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+    min-width: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 36px !important;
+    max-height: none !important;
+    line-height: 1.4 !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.4rem !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    box-sizing: border-box !important;
+}
+
+#modalObservacoes .observacoes-acoes .btn.btn-success,
+#modalObservacoes .observacoes-acoes button.btn-success,
+.modal-observacoes .observacoes-acoes .btn.btn-success,
+.modal-observacoes .observacoes-acoes button.btn-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 1px 3px rgba(40, 167, 69, 0.2) !important;
+}
+
+#modalObservacoes .observacoes-acoes .btn.btn-success:hover,
+#modalObservacoes .observacoes-acoes button.btn-success:hover,
+.modal-observacoes .observacoes-acoes .btn.btn-success:hover,
+.modal-observacoes .observacoes-acoes button.btn-success:hover {
+    background: linear-gradient(135deg, #218838 0%, #1ea085 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 6px rgba(40, 167, 69, 0.3) !important;
+}
+
+#modalObservacoes .observacoes-acoes .btn.btn-danger,
+#modalObservacoes .observacoes-acoes button.btn-danger,
+.modal-observacoes .observacoes-acoes .btn.btn-danger,
+.modal-observacoes .observacoes-acoes button.btn-danger {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 1px 3px rgba(108, 117, 125, 0.2) !important;
+}
+
+#modalObservacoes .observacoes-acoes .btn.btn-danger:hover,
+#modalObservacoes .observacoes-acoes button.btn-danger:hover,
+.modal-observacoes .observacoes-acoes .btn.btn-danger:hover,
+.modal-observacoes .observacoes-acoes button.btn-danger:hover {
+    background: linear-gradient(135deg, #5a6268 0%, #495057 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 6px rgba(108, 117, 125, 0.3) !important;
+}
+
+/* EXCEÇÃO: Botões de Editar/Excluir nas observações existentes - APENAS ÍCONES */
+#modalObservacoes .observacao-acoes .btn-observacao,
+.modal-observacoes .observacao-acoes .btn-observacao {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    padding: 0.4rem !important;
+    border: none !important;
+    border-radius: 5px !important;
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+    position: relative !important;
+    overflow: visible !important;
+    min-width: 32px !important;
+    width: 32px !important;
+    max-width: 32px !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    max-height: 32px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+    opacity: 0.85 !important;
+}
+
+#modalObservacoes .observacao-acoes .btn-observacao-editar,
+.modal-observacoes .observacao-acoes .btn-observacao-editar {
+    background: rgba(40, 167, 69, 0.1) !important;
+    color: #28a745 !important;
+    box-shadow: none !important;
+}
+
+#modalObservacoes .observacao-acoes .btn-observacao-editar:hover,
+.modal-observacoes .observacao-acoes .btn-observacao-editar:hover {
+    background: #28a745 !important;
+    color: white !important;
+    opacity: 1 !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 2px 6px rgba(40, 167, 69, 0.3) !important;
+}
+
+#modalObservacoes .observacao-acoes .btn-observacao-excluir,
+.modal-observacoes .observacao-acoes .btn-observacao-excluir {
+    background: rgba(220, 53, 69, 0.1) !important;
+    color: #dc3545 !important;
+    box-shadow: none !important;
+}
+
+#modalObservacoes .observacao-acoes .btn-observacao-excluir:hover,
+.modal-observacoes .observacao-acoes .btn-observacao-excluir:hover {
+    background: #dc3545 !important;
+    color: white !important;
+    opacity: 1 !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 2px 6px rgba(220, 53, 69, 0.3) !important;
+}
+
+#modalObservacoes .observacao-acoes .btn-observacao-salvar,
+.modal-observacoes .observacao-acoes .btn-observacao-salvar {
+    background: rgba(0, 123, 255, 0.1) !important;
+    color: #007bff !important;
+    box-shadow: none !important;
+}
+
+#modalObservacoes .observacao-acoes .btn-observacao-salvar:hover,
+.modal-observacoes .observacao-acoes .btn-observacao-salvar:hover {
+    background: #007bff !important;
+    color: white !important;
+    opacity: 1 !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3) !important;
+}
+
+#modalObservacoes .observacao-acoes .btn-observacao-cancelar,
+.modal-observacoes .observacao-acoes .btn-observacao-cancelar {
+    background: rgba(108, 117, 125, 0.1) !important;
+    color: #6c757d !important;
+    box-shadow: none !important;
+}
+
+#modalObservacoes .observacao-acoes .btn-observacao-cancelar:hover,
+.modal-observacoes .observacao-acoes .btn-observacao-cancelar:hover {
+    background: #6c757d !important;
+    color: white !important;
+    opacity: 1 !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 2px 6px rgba(108, 117, 125, 0.3) !important;
+}
+
+#modalObservacoes .observacao-acoes .btn-observacao i,
+.modal-observacoes .observacao-acoes .btn-observacao i {
+    font-size: 0.9rem !important;
+    transition: transform 0.2s ease !important;
+    margin: 0 !important;
+}
+
+#modalObservacoes .observacao-acoes .btn-observacao:hover i,
+.modal-observacoes .observacao-acoes .btn-observacao:hover i {
+    transform: scale(1) !important;
+}
+
+/* Melhorias no layout das observações no modal */
+#modalObservacoes .observacao-item,
+.modal-observacoes .observacao-item {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
+    border-left: 4px solid #17a2b8 !important;
+    padding: 1.25rem !important;
+    margin-bottom: 1.25rem !important;
+    border-radius: 0 12px 12px 0 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    transition: all 0.3s ease !important;
+}
+
+#modalObservacoes .observacao-item:hover,
+.modal-observacoes .observacao-item:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+}
+
+#modalObservacoes .observacao-header,
+.modal-observacoes .observacao-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    margin-bottom: 1rem !important;
+    gap: 1rem !important;
+}
+
+#modalObservacoes .observacao-info,
+.modal-observacoes .observacao-info {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.25rem !important;
+    flex: 1 !important;
+}
+
+#modalObservacoes .observacao-autor,
+.modal-observacoes .observacao-autor {
+    font-weight: 600 !important;
+    color: #17a2b8 !important;
+    font-size: 0.95rem !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+#modalObservacoes .observacao-data,
+.modal-observacoes .observacao-data {
+    font-size: 0.85rem !important;
+    color: #6c757d !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+#modalObservacoes .observacao-texto,
+.modal-observacoes .observacao-texto {
+    color: #495057 !important;
+    line-height: 1.6 !important;
+    font-size: 0.95rem !important;
+    margin-top: 0.75rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0.75rem !important;
+    background: rgba(255,255,255,0.7) !important;
+    border-radius: 6px !important;
+    border-left: 3px solid #e9ecef !important;
+    min-height: 2.5rem !important;
+}
+
+#modalObservacoes .observacao-acoes,
+.modal-observacoes .observacao-acoes {
+    display: flex !important;
+    gap: 0.5rem !important;
+    flex-shrink: 0 !important;
+    justify-content: flex-end !important;
+    padding-top: 0.5rem !important;
+    border-top: 1px solid #e9ecef !important;
+    margin-top: auto !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    color: white;
+    font-weight: 600;
+}
+
+/* Botão Filtrar - Verde Pastel */
+.btn-primary {
+    background: linear-gradient(135deg, #a8e6a3 0%, #7dd87a 100%) !important;
+    border-color: #6bc665 !important;
+    color: #2d5a2b !important;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #7dd87a 0%, #5bc555 100%) !important;
+    border-color: #4a9d45 !important;
+    color: #1a3d18 !important;
+}
+
+/* Botão de Limpar Filtros - Amarelo Pastel */
+.btn-limpar-filtros {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%) !important;
+    border-color: #fdcb6e !important;
+    color: #856404 !important;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-limpar-filtros:hover {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%) !important;
+    border-color: #e17055 !important;
+    color: #6c4a00 !important;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== STATUS BADGES ===== */
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-lead {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+/* ===== BADGES ESPECÍFICOS - Cores da tabela de observações ===== */
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.6em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.bg-info {
+    background-color: #d1ecf1 !important;
+    color: #0c5460 !important;
+    border: 1px solid #bee5eb;
+}
+
+.bg-secondary {
+    background-color: #f8f9fa !important;
+    color: #495057 !important;
+    border: 1px solid #dee2e6;
+}
+
+.text-dark {
+    color: #495057 !important;
+}
+
+/* Meta informações com cores da tabela de observações */
+.vendor-meta {
+    font-size: 0.85em;
+    color: #666;
+    background: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border-left: 3px solid #007bff;
+}
+
+.vendor-code {
+    color: #6f42c1 !important;
+    font-weight: 500;
+}
+
+.vendor-name {
+    color: #007bff !important;
+    font-weight: 500;
+}
+
+.uf-badge {
+    color: #28a745 !important;
+    font-weight: 500;
+}
+
+/* ===== AÇÕES ===== */
+.lead-nome {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.table-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.actions-column {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.actions-green {
+    border-left: 3px solid #4CAF50;
+    padding-left: 4px;
+}
+
+.actions-yellow {
+    border-left: 3px solid #ffc107;
+    padding-left: 4px;
+}
+
+.actions-red {
+    border-left: 3px solid #dc3545;
+    padding-left: 4px;
+}
+
+/* Botões específicos com larguras padronizadas - compactos */
+.btn-sm.btn-ligar,
+.btn-sm.btn-warning,
+.btn-sm.btn-success,
+.btn-sm.btn-danger,
+.btn-sm.btn-info {
+    min-width: 22px;
+    padding: 4px;
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+/* Garantir que botões de agendamento sejam sempre visíveis */
+.btn-sm.btn-success {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-flex !important;
+}
+
+/* Estilo especial para botões com telefones que contêm hífen */
+.btn-sm.btn-success[style*="border: 2px solid #ff6b6b"] {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+    color: white !important;
+    border: 2px solid #ff6b6b !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-flex !important;
+}
+
+.btn-ligar {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: var(--white);
+    border: none;
+}
+
+.btn-ligar:hover {
+    background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn-ligar:disabled,
+.btn-ligar[disabled] {
+    background: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-ligar:disabled:hover,
+.btn-ligar[disabled]:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-ligar.disabled {
+    background: #6c757d !important;
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+}
+
+.btn-ligar.disabled:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* ===== BOTÃO EDITAR DESABILITADO ===== */
+.btn-danger.disabled {
+    background: #6c757d !important;
+    border-color: #6c757d !important;
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+}
+
+.btn-danger.disabled:hover {
+    background: #6c757d !important;
+    border-color: #6c757d !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* ===== EMOJI DE MANUTENÇÃO AO LADO ===== */
+.emoji-manutencao {
+    font-size: 14px;
+    margin-left: 4px;
+    vertical-align: middle;
+    opacity: 0.8;
+}
+
+/* ===== PAGINAÇÃO ===== */
+.paginacao-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--white);
+    border-top: 1px solid var(--border-color);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.paginacao-info {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.paginacao-controles {
+    display: flex;
+    gap: 0.25rem;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.paginacao-numeros {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.paginacao-ellipsis {
+    color: var(--text-muted);
+    padding: 0.5rem;
+}
+
+/* ===== MENSAGENS ===== */
+.error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #c62828;
+}
+
+.no-leads {
+    text-align: center;
+    padding: 48px;
+    color: #666;
+}
+
+.no-leads i {
+    font-size: 3rem;
+    color: #ddd;
+    margin-bottom: 16px;
+}
+
+/* ===== PLACEHOLDER PARA VENDEDORES ===== */
+.placeholder-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    padding: 48px;
+}
+
+.placeholder-content {
+    text-align: center;
+    max-width: 500px;
+    background: #fff;
+    padding: 48px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder-content i {
+    font-size: 4rem;
+    color: #ff9800;
+    margin-bottom: 24px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1200px) {
+    .leads-table {
+        font-size: 0.8rem;
+    }
+    
+    .leads-table th,
+    .leads-table td {
+        padding: 0.5rem 0.3rem;
+    }
+    
+    .leads-table th:nth-child(1) { min-width: 140px; }
+    .leads-table th:nth-child(2) { min-width: 140px; }
+    .leads-table th:nth-child(3) { min-width: 90px; }
+    .leads-table th:nth-child(4) { min-width: 160px; }
+    .leads-table th:nth-child(5) { min-width: 45px; }
+    .leads-table th:nth-child(6) { min-width: 100px; }
+    .leads-table th:nth-child(7) { min-width: 55px; }
+    .leads-table th:nth-child(8) { min-width: 140px; }
+}
+
+@media (max-width: 768px) {
+    .leads-container {
+        padding: 16px;
+    }
+    
+    .filtros-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .filtros-stats {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .filtros-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .leads-table {
+        min-width: 800px;
+        font-size: 0.75rem;
+    }
+    
+    .leads-table th,
+    .leads-table td {
+        padding: 0.3rem 0.2rem;
+    }
+    
+    .leads-table th:nth-child(1) { /* Nome */
+        min-width: 120px;
+    }
+    
+    .leads-table th:nth-child(2) { /* Email */
+        min-width: 120px;
+    }
+    
+    .leads-table th:nth-child(3) { /* Telefone */
+        min-width: 80px;
+    }
+    
+    .leads-table th:nth-child(4) { /* Endereço */
+        min-width: 140px;
+    }
+    
+    .leads-table th:nth-child(5) { /* UF */
+        min-width: 40px;
+    }
+    
+    .leads-table th:nth-child(6) { /* Vendedor Responsável */
+        min-width: 90px;
+    }
+    
+    .leads-table th:nth-child(7) { /* Status */
+        min-width: 50px;
+    }
+    
+    .leads-table th:nth-child(8) { /* Ações */
+        min-width: 90px;
+    }
+    
+    .table-actions {
+        flex-direction: row;
+        gap: 0.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .btn-sm {
+        padding: 3px 4px;
+        font-size: 0.65rem;
+        min-width: 20px;
+        height: 20px;
+    }
+    
+    .btn-sm.btn-ligar,
+    .btn-sm.btn-warning,
+    .btn-sm.btn-success,
+    .btn-sm.btn-danger,
+    .btn-sm.btn-info {
+        min-width: 20px;
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+    }
+    
+    /* EXCEÇÃO: Botões do modal de observações em mobile */
+    #modalObservacoes .observacoes-acoes .btn,
+    #modalObservacoes .observacoes-acoes button,
+    .modal-observacoes .observacoes-acoes .btn,
+    .modal-observacoes .observacoes-acoes button {
+        padding: 0.6rem 1rem !important;
+        font-size: 0.9rem !important;
+        min-height: 40px !important;
+        width: 100% !important;
+        min-width: auto !important;
+        max-width: none !important;
+    }
+    
+    /* EXCEÇÃO: Botões de Editar/Excluir nas observações em mobile */
+    #modalObservacoes .observacao-acoes .btn-observacao,
+    .modal-observacoes .observacao-acoes .btn-observacao {
+        padding: 0.5rem !important;
+        font-size: 0.9rem !important;
+        min-width: 36px !important;
+        width: 36px !important;
+        height: 36px !important;
+        min-height: 36px !important;
+    }
+    
+    #modalObservacoes .observacao-acoes,
+    .modal-observacoes .observacao-acoes {
+        flex-direction: row !important;
+        gap: 0.5rem !important;
+        justify-content: flex-end !important;
+    }
+    
+    /* Layout das observações em mobile */
+    #modalObservacoes .observacao-item,
+    .modal-observacoes .observacao-item {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    #modalObservacoes .observacao-texto,
+    .modal-observacoes .observacao-texto {
+        margin-bottom: 0.875rem !important;
+        padding: 0.625rem !important;
+    }
+    
+    .lead-nome {
+        font-size: 0.8rem;
+    }
+    
+    .paginacao-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .paginacao-controles {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

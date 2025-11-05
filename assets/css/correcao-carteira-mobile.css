@@ -1,0 +1,537 @@
+/* ===== CORREÇÃO ESPECÍFICA PARA CARTEIRA MOBILE ===== */
+/* Este arquivo corrige o problema de alinhamento à esquerda na página carteira.php */
+
+/* ===== CORREÇÃO PARA DESKTOP ===== */
+@media (min-width: 769px) {
+    /* Garantir que o layout desktop ocupe melhor a tela */
+    .dashboard-layout {
+        display: flex !important;
+        width: 100% !important;
+        min-height: 100vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Ajustar o container principal para ocupar melhor o espaço */
+    .dashboard-container {
+        flex: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Ajustar o conteúdo principal para ocupar melhor o espaço */
+    .dashboard-main {
+        flex: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 2rem !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Centralizar e ajustar largura dos elementos principais */
+    .welcome-section {
+        width: 100% !important;
+        max-width: 1400px !important;
+        margin: 0 auto 2rem auto !important;
+        padding: 0 1rem !important;
+        text-align: center !important;
+    }
+    
+    .carteira-stats {
+        width: 100% !important;
+        max-width: 1400px !important;
+        margin: 0 auto 2rem auto !important;
+        padding: 0 1rem !important;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+        gap: 2rem !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .carteira-container {
+        width: 100% !important;
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+    }
+    
+    .filtros-container {
+        width: 100% !important;
+        max-width: 1400px !important;
+        margin: 0 auto 2rem auto !important;
+        padding: 0 1rem !important;
+    }
+    
+    .filtros-form {
+        width: 100% !important;
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+    }
+    
+    .filtros-grid {
+        width: 100% !important;
+        max-width: 1400px !important;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        gap: 1.5rem !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .metas-detalhes-container {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 auto 2rem auto !important;
+        padding: 0 1rem !important;
+    }
+    
+    .metas-container {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 auto 2rem auto !important;
+        padding: 0 1rem !important;
+    }
+    
+    .metas-section {
+        width: 100% !important;
+        max-width: none !important;
+    }
+    
+    .metas-grid {
+        width: 100% !important;
+        max-width: 1400px !important;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+        gap: 2rem !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .table-responsive {
+        width: 100% !important;
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+    }
+    
+    .paginacao-container {
+        width: 100% !important;
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+        text-align: center !important;
+    }
+    
+    /* Ajustar cards para melhor aproveitamento do espaço */
+    .stat-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        padding: 2rem !important;
+    }
+    
+    /* Garantir que a tabela ocupe bem o espaço */
+    .clientes-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Centralizar textos dos containers principais */
+    .welcome-section,
+    .carteira-stats,
+    .carteira-container,
+    .filtros-container,
+    .metas-detalhes-container,
+    .table-responsive,
+    .paginacao-container {
+        text-align: center !important;
+    }
+    
+    /* Exceção para elementos que devem manter alinhamento à esquerda */
+    .clientes-table th,
+    .clientes-table td,
+    .filtro-grupo label,
+    .filtro-grupo select,
+    .filtro-grupo input {
+        text-align: left !important;
+    }
+    
+    /* Garantir espaçamento consistente */
+    .dashboard-main > * {
+        margin-bottom: 2rem !important;
+    }
+    
+    .dashboard-main > *:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    /* ===== CORREÇÃO ESPECÍFICA PARA NÃO INVADIR A SIDEBAR ===== */
+    
+    /* Garantir que o sidebar tenha sua largura fixa e fique fixo no scroll */
+    .sidebar-modern {
+        width: 280px !important;
+        flex-shrink: 0 !important;
+        position: fixed !important;
+        left: 0 !important;
+        top: 0 !important;
+        height: 100vh !important;
+        transform: none !important;
+        display: block !important;
+        z-index: 1000 !important;
+        overflow-y: auto !important;
+    }
+    
+    /* ===== CORREÇÃO AGESSIVA PARA SOBRESCREVER CONFLITOS ===== */
+    
+    /* Sobrescrever TODAS as regras conflitantes do estilo.css */
+    .dashboard-container,
+    .sidebar-modern + .dashboard-container {
+        margin-left: 280px !important;
+        width: calc(100% - 280px) !important;
+        max-width: calc(100% - 280px) !important;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 100vh !important;
+        background: var(--light-color) !important;
+        transition: var(--transition) !important;
+    }
+    
+    /* ===== CORREÇÃO ESPECÍFICA PARA PERFIS VENDEDOR E REPRESENTANTE ===== */
+    
+    /* Garantir que vendedores e representantes não invadam a sidebar */
+    .dashboard-layout[data-perfil="vendedor"] .dashboard-container,
+    .dashboard-layout[data-perfil="representante"] .dashboard-container,
+    .dashboard-layout[data-perfil="vendedor"] .sidebar-modern + .dashboard-container,
+    .dashboard-layout[data-perfil="representante"] .sidebar-modern + .dashboard-container {
+        margin-left: 280px !important;
+        width: calc(100% - 280px) !important;
+        max-width: calc(100% - 280px) !important;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 100vh !important;
+        background: var(--light-color) !important;
+        transition: var(--transition) !important;
+    }
+    
+    /* Garantir que o conteúdo principal de vendedores e representantes respeite a sidebar */
+    .dashboard-layout[data-perfil="vendedor"] .dashboard-main,
+    .dashboard-layout[data-perfil="representante"] .dashboard-main {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 2rem !important;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+
+/* ===== CORREÇÃO PARA MOBILE ===== */
+@media (max-width: 768px) {
+    /* ===== RESET COMPLETO DO LAYOUT ===== */
+    
+    /* Reset completo para garantir que não haja conflitos */
+    * {
+        box-sizing: border-box !important;
+    }
+    
+    /* ===== CORREÇÃO PRINCIPAL DO LAYOUT ===== */
+    
+    /* Forçar o layout a ocupar toda a largura disponível */
+    .dashboard-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        min-height: 100vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    
+    /* Corrigir o container principal para ocupar toda a largura */
+    .dashboard-container {
+        flex: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        position: relative !important;
+    }
+    
+    /* Corrigir o conteúdo principal */
+    .dashboard-main {
+        flex: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 1rem !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        position: relative !important;
+    }
+    
+    /* ===== CORREÇÃO ESPECÍFICA DO SIDEBAR ===== */
+    
+    /* Garantir que o sidebar esteja escondido corretamente */
+    .sidebar-modern {
+        position: fixed !important;
+        left: -280px !important;
+        top: 0 !important;
+        height: 100vh !important;
+        z-index: 1000 !important;
+        transform: translateX(-100%) !important;
+        transition: transform 0.3s ease !important;
+        display: none !important;
+    }
+    
+    /* Quando o sidebar estiver visível */
+    .sidebar-modern.show {
+        transform: translateX(0) !important;
+        left: 0 !important;
+        display: block !important;
+    }
+    
+    /* Garantir que o container principal não seja afetado pelo sidebar */
+    .sidebar-modern + .dashboard-container {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-top: 4rem !important;
+    }
+    
+    /* ===== CORREÇÃO DOS ELEMENTOS ESPECÍFICOS ===== */
+    
+    /* Centralizar seção de boas-vindas */
+    .welcome-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        margin: 0 auto 2rem auto !important;
+        padding: 0 1rem !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Centralizar cards de estatísticas */
+    .carteira-stats {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        gap: 1.5rem !important;
+        margin: 0 auto 2rem auto !important;
+        padding: 0 1rem !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Centralizar container da carteira */
+    .carteira-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Centralizar filtros */
+    .filtros-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 2rem auto !important;
+        padding: 0 1rem !important;
+        box-sizing: border-box !important;
+    }
+    
+    .filtros-form {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+    
+    .filtros-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Centralizar cards de metas */
+    .metas-detalhes-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 2rem auto !important;
+        padding: 0 1rem !important;
+        box-sizing: border-box !important;
+    }
+    
+    .metas-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Garantir que a tabela seja responsiva */
+    .table-responsive {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Centralizar paginação */
+    .paginacao-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* ===== CORREÇÃO DE ELEMENTOS ESPECÍFICOS ===== */
+    
+    /* Garantir que os cards sejam centralizados */
+    .stat-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Garantir que a tabela seja centralizada */
+    .clientes-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* ===== CORREÇÃO DE TEXTOS ===== */
+    
+    /* Centralizar textos dos containers principais */
+    .welcome-section,
+    .carteira-stats,
+    .carteira-container,
+    .filtros-container,
+    .metas-detalhes-container,
+    .table-responsive,
+    .paginacao-container {
+        text-align: center !important;
+    }
+    
+    /* Exceção para elementos que devem manter alinhamento à esquerda */
+    .clientes-table th,
+    .clientes-table td,
+    .filtro-grupo label,
+    .filtro-grupo select,
+    .filtro-grupo input {
+        text-align: left !important;
+    }
+    
+    /* ===== CORREÇÃO DE ESPAÇAMENTOS ===== */
+    
+    /* Garantir espaçamento consistente */
+    .dashboard-main > * {
+        margin-bottom: 2rem !important;
+    }
+    
+    .dashboard-main > *:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    /* ===== CORREÇÃO DE OVERFLOW ===== */
+    
+    /* Garantir que não haja overflow horizontal */
+    body,
+    .dashboard-layout,
+    .dashboard-container,
+    .dashboard-main {
+        overflow-x: hidden !important;
+    }
+    
+    /* ===== CORREÇÃO ESPECÍFICA PARA NAVEGAÇÃO MOBILE ===== */
+    
+    /* Garantir que o botão de menu mobile esteja visível */
+    .mobile-nav-toggle {
+        display: block !important;
+        position: fixed !important;
+        top: 1rem !important;
+        left: 1rem !important;
+        z-index: 10000 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+    
+    /* Garantir que a navegação mobile funcione corretamente */
+    .mobile-nav {
+        position: fixed !important;
+        top: 0 !important;
+        left: -100% !important;
+        width: 100% !important;
+        height: 100vh !important;
+        z-index: 9999 !important;
+        transition: left 0.3s ease !important;
+    }
+    
+    .mobile-nav.show {
+        left: 0 !important;
+    }
+    
+    /* ===== CORREÇÃO ESPECÍFICA PARA PERFIS VENDEDOR E REPRESENTANTE ===== */
+    
+    /* Garantir que o layout seja consistente para todos os perfis */
+    .dashboard-layout[data-perfil="vendedor"],
+    .dashboard-layout[data-perfil="representante"] {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        min-height: 100vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .dashboard-layout[data-perfil="vendedor"] .dashboard-container,
+    .dashboard-layout[data-perfil="representante"] .dashboard-container {
+        flex: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .dashboard-layout[data-perfil="vendedor"] .dashboard-main,
+    .dashboard-layout[data-perfil="representante"] .dashboard-main {
+        flex: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 1rem !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
