@@ -20,7 +20,15 @@ if (php_sapi_name() === 'cli' || php_sapi_name() === 'cli-server') {
 }
 
 // CONFIGURAÇÕES DEPENDENDO DO AMBIENTE
-if ($isLocal) {
+$isDocker = getenv('DOCKER_ENV') === 'true';
+
+if ($isDocker) {
+	// DOCKER (homelab)
+	$host = getenv('DB_HOST') ?: 'db';
+	$db = getenv('DB_NAME') ?: 'autopel01';
+	$user = getenv('DB_USER') ?: 'autopel';
+	$pass = getenv('DB_PASS') ?: 'autopel_vuln_2026';
+} elseif ($isLocal) {
 	// LOCALHOST (XAMPP)
     $host = 'mysql06-farm88.kinghost.net';
 	$db = 'autopel01';

@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: autopel-bi
+    ports:
+      - "8080:80"
+    environment:
+      - DOCKER_ENV=true
+      - DB_HOST=db
+      - DB_NAME=autopel01
+      - DB_USER=autopel
+      - DB_PASS=autopel_vuln_2026
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./assets:/var/www/html/assets
+    networks:
+      - autopel-net
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0
+    container_name: autopel-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_autopel_2026
+      MYSQL_DATABASE: autopel01
+      MYSQL_USER: autopel
+      MYSQL_PASSWORD: autopel_vuln_2026
+    ports:
+      - "3307:3306"
+    volumes:
+      - autopel-db-data:/var/lib/mysql
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/01-init.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot_autopel_2026"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - autopel-net
+    restart: unless-stopped
+
+volumes:
+  autopel-db-data:
+
+networks:
+  autopel-net:
+    driver: bridge
